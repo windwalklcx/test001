@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg</title>
+    <link rel="icon" href="image/favicon.ico">
+	<link rel="stylesheet" href="css/pub_header.css">
+    <link rel="stylesheet" href="css/reg.css">
+    <script src="js/reg.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+<body>
+    <div class="web-frame">
+        <nav>
+            <div class="navbar-innerFrame">
+                <div class="navbar-container">
+                    <a href="#" class="navbar-logo">
+                        <img src="image/yingdi_logo_w.png">
+                    </a>
+                    <ul class="bar-list">
+                        <li class="shop">
+                            <a href="index.html">营地商城</a>
+                        </li>
+                        <li class="taobao">
+                            <a href="#">营地淘宝</a>
+                        </li>
+                        <li class="match">
+                            <a href="#">比赛中心</a>
+                        </li>
+                        <li class="gamecenter">
+                            <a href="#">游戏中心</a>
+                        </li>
+                        <li class="downLoadApp">
+                            <a href="#">下载App</a>
+                        </li>
+                        <li class="yingdi-vip">
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                    <div class="login">
+                        <a href="#">注册</a>
+                        <a href="javascript:loginin()" class="toLoginBtn">登录</a>
+                    </div>
+                    <div class="user-container" style="display: none;">
+                        <div class="user-msg">
+                            <span class="hasMesgNow"></span>
+                            <div class="user-option">
+                                <div style="height: 26px"></div>
+                                <ul class="msgButtonList">
+                                    <li class="article_reply_msg">
+                                        <a href="#">收到评论</a>
+                                        <span class="noticeRemark hidden"></span>
+                                    </li>
+                                    <li class="forum_reply_msg">
+                                        <a href="#">收到回帖</a>
+                                        <span class="noticeRemark hidden"></span>
+                                    </li>
+                                    <li class="secret_chat_msg">
+                                        <a href="#">我的私信</a>
+                                        <span class="noticeRemark hidden"></span>
+                                    </li>
+                                    <li class="system_msg">
+                                        <a href="#">系统通知</a>
+                                        <span class="noticeRemark hidden"></span>
+                                    </li>
+                                    <li class="public_msg">
+                                        <a href="#">系统公告</a>
+                                        <span class="noticeRemark hidden"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                             
+                        </div>
+                        <div class="user-avatar">
+                            <img src="image/defaultavatar.png" class="userHeadImg">
+                            <div class="user-option">
+                                <div style="height: 26px;"></div>
+                                <ul class="myButtonList">
+                                    <li class='user-detail'>
+                                        <div class="user-name"></div>
+                                        <div class="user-fire"></div>
+                                    </li>
+                                    <li class="item myhome-page">
+                                        <a href="#">我的主页</a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">我的营地</a>
+                                    </li>
+                                    <li  class="item">
+                                        <a href="#">资料设置</a>
+                                    </li>
+                                    <li class="toLogout">退出登录</li>
+                                </ul>
+                                <img src="image/normal.png" class="userBorder">
+                            </div>    
+                        </div>
+
+                    </div>
+                    <div class="to-coutribute">我要投稿</div>
+                    <div class="navbar-searchInputInner"></div>
+                </div>
+            </div>
+            <div class="navbar-menuFrame">
+                <ul>
+                    <li>
+                        <a href="#">推荐</a>
+                    </li>
+                    <li>
+                        <a href="#">炉石传说</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">炉石传说首页</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">精选文集</a></li>
+                            <li><a href="#">直播聚合</a></li>
+                            <li><a href="#">模拟开包</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">万智牌</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">万智牌首页</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">精选文集</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">游戏王</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">游戏王首页</a></li>
+                            <li><a href="#">精选文集</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">影之诗</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">影之诗首页</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">精选文集</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">昆特牌</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">昆特牌首页</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">精选文集</a></li>
+                            <li><a href="#">直播聚合</a></li>
+                            <li><a href="#">开桶助手</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">阴阳师：百闻牌</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">百闻牌首页</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">符文之地传奇</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">卡牌查询</a></li>
+                            <li><a href="#">套牌合集</a></li>
+                            <li><a href="#">套牌广场</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">宝可梦卡牌</a>
+                    </li>
+                    <li>
+                        <a href="#">红与蓝</a>
+                    </li>
+                    <li>
+                        <a href="#">斗福</a>
+                    </li>
+                    <li>
+                        <a href="#">桌面游戏</a>
+                    </li>
+                    <li>
+                        <a href="#">日本麻将</a>
+                    </li>
+                    <li>
+                        <a href="#">LOL：云顶之弈</a>
+                    </li>
+                    <li>
+                        <a href="#">刀塔霸业</a>
+                    </li>
+                    <li>
+                        <a href="#">剑与远征</a>
+                    </li>
+                    <li>
+                        <a href="#">玩家杂谈</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">玩家杂谈首页</a></li>
+                            <li><a href="#">影视</a></li>
+                            <li><a href="#">读书</a></li>
+                            <li><a href="#">历史</a></li>
+                            <li><a href="#">生活</a></li>
+                            <li><a href="#">音乐</a></li>
+                            <li><a href="#">科技</a></li>
+                            <li><a href="#">美食</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">二次元</a>
+                    </li>
+                    <li>
+                        <a href="#">同人绘画</a>
+                    </li>
+                    <li>
+                        <a href="#">同人文学</a>
+                    </li>
+                    <li>
+                        <a href="#">营地电台</a>
+                    </li>
+                    <li>
+                        <a href="#">PC游戏</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">英雄联盟</a></li>
+                            <li><a href="#">守望先锋</a></li>
+                            <li><a href="#">风暴英雄</a></li>
+                            <li><a href="#">电游打折优惠</a></li>
+                            <li><a href="#">流放之路</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">主机游戏</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">主机游戏</a></li>
+                            <li><a href="#">任天堂NS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">手机游戏</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">虚荣</a></li>
+                            <li><a href="#">燃烧王座</a></li>
+                            <li><a href="#">明日方舟</a></li>
+                            <li><a href="#">糖果缤纷乐</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">更多棋牌</a>
+                        <ul class="sub-level-menu">
+                            <li><a href="#">卡牌游戏</a></li>
+                            <li><a href="#">Artifact</a></li>
+                            <li><a href="#">上古卷轴：传奇</a></li>
+                            <li><a href="#">天神学院</a></li>
+                            <li><a href="#">2047</a></li>
+                            <li><a href="#">皇室战争</a></li>
+                            <li><a href="#">多多自走棋</a></li>
+                            <li><a href="#">赤潮自走棋</a></li>
+                            <li><a href="#">阴阳师自走棋</a></li>
+                            <li><a href="#">Mythgard</a></li>
+                            <li><a href="#">仙剑奇侠传：九野</a></li>
+                            <li><a href="#">战歌竞技场</a></li>
+                            <li><a href="#">斩兽之刃</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <section>
+            <div class="register-frame yingdiUser">
+                <div class="register-frame-content">
+                    <div class="yingdi-logo">
+                        <img src="image/logo.png">
+                    </div>
+                    <div class="register-frame-infoInputArea">
+                        <div class="register-frame-infoInputItem">
+                            <div class="intl-tel-input allow-dropdown">
+                                <div class="flag-coutainer">
+                                    <div class="selected-flag" tabindex="0">
+                                        <div class="iti-flag cn"></div>
+                                        <div class="tit-arrow"></div>
+                                        <ul class="country-list hide">
+                                            <li class="country preferred active highlight">
+                                                <div class="flag-box">
+                                                    <div class="iti-flag cn"></div>
+                                                </div>
+                                                <span class="country-name">China(中国)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <input type="text" id="phone" placeholder="请输入您的手机号" onfocus="phonetip()" onblur="checkphone()" class="user_phoneNum">
+                            </div>
+                            <span class="required"></span>
+                            <span class="prompt-txt" id="s1"></span>
+                        </div>                   
+                        <div class="register-frame-infoInputArea1">
+                            <input type="text" class="check_code" id='cvcode' placeholder="验证码" onblur="checkvcode()">
+                            <span id="vcode">****</span>
+                            <button onclick="rcode()" class="send_check_code">获取验证码</button>
+                            <span class="required"></span>
+                            <span class="prompt-txt" id="s5"></span>
+                        </div>
+                        <div class="register-frame-infoInputItem">
+                            <input type="text" id="uname" onfocus="unametip()" onblur="checkuname()" placeholder="用户名 长度3-15字符 暂不支持修改" class="user_username">
+                            <span class="required"></span>
+                            <span id="s2" class="prompt-txt"></span>
+                        </div>
+                        <div class="register-frame-infoInputItem">
+                            <input type="password" id="upwd" placeholder="密码 长度不小于8位" onfocus="upwdtip()" onblur="checkupwd()" class="user_password">
+                            <span class="required"></span>
+                            <span id="s3" class="prompt-txt"></span>
+                        </div>
+                        <div class="register-frame-infoInputItem">
+                            <input type="password" id="cpwd" placeholder="再输入一次密码" onfocus="cpwdtip()" onblur="checkcpwd()" class="confirm_password">
+                            <span class="required"></span>
+                            <span id="s4"  class="prompt-txt"></span>
+                        </div>
+                        <div class="register-frame-infoInputItem">
+                            <input type="text" placeholder="好友邀请码" class="confirm_password">
+                        </div>                        
+                    </div>
+                    <div class="finishRegister">
+                        <button onclick="reg()" id="finishRegisterBtn">完成注册</button>
+                    </div>
+                    <div class="toThirdRegisterArea">
+                        <div class="textTip">
+                            如果您是营地老司机，无需注册可直接 
+                            <span class="toLoginNow" onclick="loginin()">登录</span>
+                        </div>
+                        <div class="toThirdRegisterBtnArea">
+                            <div class="textTip">也可以使用第三方注册</div>
+                            <img src="image/qq.png" title="qq登录">
+                            <img src="image/weixin.png" title="微信登录">
+                            <img src="image/weibo.png" title="微博登录">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="overlay" id="bggray"></div>
+        <div class="login_frame" id="loginwin">
+            <div class="login_frame_top">
+                <a href="javascript:close()" class="close">
+                    <img src="image/close.png">
+                </a>
+                <div class="login_logoImg">
+                    <img src="image/logo1.png">
+                </div>
+                <div class="switchLogin" id="login-switch">
+                    <img src="image/qr.png">
+                </div>
+            </div>
+            <div class="login_frame_content">
+                <div class="form-group">
+                    <input type="text" placeholder="用户名"  id='phonelog'>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="密码"  id='upwdlog'>
+                </div>
+                <div class="form_other">
+                    <div class="user_inputWarning"></div>
+                    <div class="checkbox">
+                        <label class="small">
+                            <input type="checkbox" checked id="login_state">
+                            记住登录状态
+                        </label>
+                    </div>
+                    <div class="register">
+                        <span>没有账号？</span><a href="#" style="margin-right: 20px;">立即注册</a><a href="#">忘记密码?</a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 4px;">
+                    <button class="loginBtn" onclick="log()">登录</button>
+                    <div class="thirdPart">
+                        <span>第三方账号登录</span>
+                        <div class="icon" id="login_weixin"></div>
+                        <div class="icon" id="qq_connect_btn"></div>
+                    </div>
+                </div>                
+            </div>
+            <div class="login_frame_qrcode hidden">
+                <div class="passMsg">使用密码登录</div>
+                <div class="photo">
+                    <div class="image">
+                        <img src="#" class="qr">
+                        <div class="tutorial">
+                            <img src="#"class="qr">
+                        </div>
+                    </div>
+                    <p>打开最新旅法师营地App</p>
+                    <p>在个人中心页面右上角打开扫一扫</p>
+                </div>
+                <div class="result hidden">
+                    <div class="image">
+                        <img src="#">
+                    </div>
+                    <p>扫描成功，请在手机上确认登录</p>
+                    <a href="#">返回二维码</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

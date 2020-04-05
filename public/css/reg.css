@@ -1,0 +1,242 @@
+        section{
+            min-height: 850px;
+            position: relative;
+        }
+        .register-frame{
+            width: 640px;
+            margin: auto;
+            clear: both;
+        }
+        .yingdi-logo{
+            margin: auto;
+            text-align: center;
+            padding-top:74px;
+        }
+        .yingdi-logo>img{
+            width: 93px;height: 93px;
+        }
+        .register-frame-infoInputArea{
+            width: 100%;
+            margin: auto;
+            padding-left: 183px;
+            margin-top: 15px;
+        }
+        .register-frame-infoInputItem{
+            margin-bottom: 9px;
+        }
+        .intl-tel-input{
+            position: relative;
+            display: inline-block;
+        }
+        .intl-tel-input>.flag-coutainer{
+            position: absolute;
+            right: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            padding: 1px;
+        }
+        .flag-coutainer>.selected-flag{
+            width: 46px;
+            z-index: 1;
+            position: relative;
+            height: 100%;
+            padding: 0 0 0 8px;
+        }
+        .selected-flag>.iti-flag{
+            position: absolute;
+            top: 0;bottom: 0;
+            margin: auto;
+        }
+        .iti-flag.cn{
+            height: 14px;
+            background-position: -1049px 0px;
+        }
+        .iti-flag{
+            width: 20px;
+            height: 15px;
+            box-shadow: 0px 0px 1px 0px #888;
+            background-image: url(../image/flags.png);
+            background-repeat: no-repeat;
+            background-color: #dbdbdb;
+            background-position: 20px 0;
+        }
+        .selected-flag>.tit-arrow{
+            position: absolute;
+            top: 50%;margin-top: -2px;
+            right: 6px;
+            width: 0;
+            height: 0;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 4px solid #555;
+        }
+        .hide{
+            display: none;
+        }
+        .country-list{
+            position: absolute;
+            z-index: 2;
+            list-style: none;
+            text-align: left;
+            padding: 0;
+            margin: 0 0 0 -1px;
+            box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            white-space: nowrap;
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+        .country-list .country.highlight{
+            background-color: rgba(0, 0,0, .05);
+        }
+        .country-list .country{
+            padding: 5px 10px;
+        }
+        .country-list .flag-box{
+            margin-right: 6px; 
+            vertical-align: middle;
+            display: inline-block; 
+            width: 20px;
+        }
+        .country-list .contry-name{
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+        .register-frame-infoInputItem input{
+            width: 280px;
+            height: 35px;
+            outline: 0;
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+        }
+        .register-frame-infoInputItem input:focus{
+            border: 1px solid #3b68b8;
+        }
+        .intl-tel-input input{
+            position: relative;
+            z-index: 0;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-right: 36px;
+            margin-right: 0;
+        }
+        #phone{
+            padding-right:6px ;
+            padding-left: 52px;
+            margin-left: 0;
+        }
+        span.required{
+            color: #3b68b8;
+            margin-left: 5px;
+            background-image: url(../image/login_option_require.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: 9px;
+            height: 9px;
+            background-size: 100% 100%;
+        }
+        span.prompt-txt{
+            color:#e5746b ;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+        .register-frame-infoInputArea1{
+            width: 100%;
+            margin: auto;
+            margin-top: 9px;
+            margin-bottom: 9px;
+        }
+        .register-frame-infoInputArea1 .check_code{
+            width: 78px;
+            height: 35px;
+            outline: 0;
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+            vertical-align: top;
+        }
+        .register-frame-infoInputArea1 .check_code:focus{
+            border: 1px solid #3b68b8;
+        }
+        .register-frame-infoInputArea1 #vcode{
+            display: inline-block;
+            width: 80px;
+            height: 35px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+            line-height: 35px;
+            text-align: center;
+            font-size: 24px;
+            color: #3b68b8;
+            margin-left: 10px;
+        }
+        .register-frame-infoInputArea1 .send_check_code{
+            width: 92px;
+            height: 35px;
+            background-color: #3b68b8;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            margin-left: 11px;
+            cursor: pointer;
+            vertical-align: top;
+        }
+        .register-frame-infoInputArea1 .send_check_code+.required{
+            vertical-align:top;
+            margin-top: 12px;
+        }
+        .register-frame-infoInputArea1 .required+.prompt-txt{
+            vertical-align:top;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        .finishRegister{
+            padding-left: 183px;
+        }
+        .finishRegister button{
+            width: 280px;height: 35px;
+            background-color: #3672bb;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .toThirdRegisterArea{
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .textTip{
+            font-size: 14px;
+            color: #9b9b9b;
+            display: inline-block;
+            vertical-align: bottom;
+            padding-left: 6px;
+        }
+        .toLoginNow{
+            color: #505050;
+            cursor: pointer;
+        }
+        .toLoginNow:hover{
+            color: #3b68b8;
+        }
+        .toThirdRegisterBtnArea{
+            padding: 4px;
+        }
+        .toThirdRegisterBtnArea img{
+            width: 22px;height: 22px;
+            opacity: .5;
+            margin-left: 10px;
+            cursor: pointer;
+            transition-property: opacity;
+            transition: .2s ease-in-out;
+        }
+        .toThirdRegisterBtnArea img:hover{
+            opacity: 1;
+            transition-property: opacity;
+            transition: .2s ease-in-out;
+        }

@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopcar</title>
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/pub_header.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/login.js"></script>
+    <style>
+      .shop_car_box{
+        position: relative;
+        width: 1200px;
+        min-height: 30px;
+        margin: auto;
+        padding-top: 40px;
+      }
+      .shop_base_title{
+        height: 38px;
+        font-size: 26px;
+        color: #4a4a4a;
+        line-height: 38px;
+      }
+      .shop_cart_emp{
+        height: 370px;
+        padding-top: 273px;
+        margin-top: 24px;
+        border-radius: 3px;
+        background-color: #f7f7f7;
+        text-align: center;
+        background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_cart_big.png);
+        background-repeat: no-repeat;
+        background-size: 176px auto;
+        background-position: 488px 74px;
+      }
+      .shop_cart_emp_text{
+        position: relative;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #9b9b9b;
+        font-weight: 700;
+        text-align: center;
+      }
+      .shop_cart_emp_link{
+        color: #37f;
+      }
+      .shop_cart_emp_svg{
+        fill: none;
+        stroke: #37f;
+        stroke-width: 2px;
+      }
+
+
+      .shop_cart_sec{
+        margin-top: 24px;
+        border: 1px solid #eaeaea;
+      }
+      .shop_cart_head{
+        height: 40px;
+        background-color: #f0f0f0;
+        line-height: 40px;
+      }
+      .shop_cart_head span{
+        float: left;
+        font-size: 14px;
+        color: #787878;
+        text-align: center;
+      }
+      .shop_cart_head span:nth-child(1){
+        width: 542px;
+      }
+      .shop_cart_head span:nth-child(2){
+        width: 170px;
+      }
+      .shop_cart_head span:nth-child(3){
+        width: 200px;
+      }
+      .shop_cart_head span:nth-child(4){
+        width: 176px;
+      }
+      .shop_cart_head span:nth-child(5){
+        width: 110px;
+      }
+      .shop_cart_list{
+        padding-top: 34px;
+        padding-bottom: 10px;
+      }
+      .shop_cart_item{
+        height: 84px;
+      }
+      .shop_cart_item+.shop_cart_item{
+        margin-top: 20px;
+      }
+      .shop_cart_choose_sec{
+        float: left;
+        width: 69px;
+        height: 100%;
+      }
+      .shop_cart_choose_btn{
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: 34px;
+        margin-left: 26px;
+        border: 1px solid #787878;
+        border-radius: 3px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .shop_cart_choose_svg{
+        display: none;
+        margin: auto;
+      }
+      .shop_cart_choose_svg polyline{
+        fill: none;stroke: #37f;
+      }
+      .shop_cart_head_sec{
+        float: left;
+        width: 84px;
+        height: 84px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .shop_cart_head_img{
+        display: block;width: 100%;height: 100%;
+      }
+      .shop_cart_title_sec{
+        float: left;
+        width: 389px;
+        height: 100%;
+        padding-left: 30px;
+      }
+      .shop_cart_title_text{
+        height: 22px;
+        line-height: 22px;
+        margin-top: 18px;
+        font-size: 16px;
+        color: #4a4a4a;
+        font-weight: 700;
+      }
+      .shop_cart_text_des{
+        height: 32px;
+        line-height: 16px;
+        font-size: 12px;
+        margin-top: 8px;
+        color: #9b9b9b;
+        overflow: hidden;
+      }
+      .shop_cart_price{
+        float: left;
+        width: 170px;
+        height: 100%;
+        line-height: 84px;
+        text-align: center;
+        font-size: 16px;
+        color: #4a4a4a;
+      }
+      .shop_cart_num_sec{
+        float: left;
+        width: 200px;
+        height: 100%;
+      }
+      .shop_cart_num_ope{
+        width: 160px;
+        height: 38px;
+        margin-top: 22px;
+        margin-left: 20px;
+        border: 1px solid #eaeaea;
+      }
+      .shop_cart_num_dec,.shop_cart_num_inc{
+        float: left;
+        width: 44px;
+        height: 36px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .shop_cart_num_dec_svg,.shop_cart_num_inc_svg{
+        stroke: #d8d8d8;
+        stroke-width: 3px;
+      }
+      .shop_cart_num_dec_svg line,.shop_cart_num_inc_svg line{
+        stroke: #d8d8d8;
+        stroke-width: 3px;
+      }
+      .shop_cart_num_input{
+        float: left;
+        width: 70px;
+        height: 36px;
+        border: 0;
+        border-left: 1px solid #eaeaea;
+        border-right: 1px solid #eaeaea;
+        outline: 0;
+        font-size: 16px;
+        color: #4a4a4a;
+        text-align: center;
+      }
+      .shop_cart_num_tip{
+        width: 100%;
+        height: 20px;
+        margin-top: 4px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #f15563;
+        text-align: center;
+      }
+      .shop_cart_st_sec{
+        float: left;
+        width: 176px;
+        height: 100%;
+        line-height: 84px;
+        font-size: 16px;
+        text-align: center;
+        color: #ef636f;
+      }
+      .shop_cart_del_sec{
+        float: left;
+        width: 110px;
+        height: 100%;
+      }
+      .shop_cart_del_btn{
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: 34px;
+        margin-left: 47px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .shop_cart_del_svg{
+        display: block;
+        margin: auto;
+      }
+      .shop_cart_del_svg line{
+        stroke: #4c4c4c;
+        stroke-width: 1px;
+      }
+
+
+
+      .shop_cart_all{
+        height: 55px;
+        border-top: 1px solid #eaeaea;
+      }
+      .shop_cart_all_choose_sec{
+        float: left;
+        width: 89px;
+        height: 100%;
+        padding-top: 19px;
+      }
+      .shop_cart_all_choose_btn{
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-left: 26px;
+        border: 1px solid #787878;
+        border-radius: 3px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .shop_cart_all_choose_svg{
+        display: none;
+        margin: auto;
+      }
+      .shop_cart_all_choose_svg polyline{
+        fill: none;
+        stroke: #37f;
+      }
+      .shop_cart_all_choose_text{
+        float: left;
+        height: 16px;
+        margin-left: 12px;
+        line-height: 16px;
+        font-size: 12px;
+        color: #9b9b9b;
+      }
+      .shop_cart_all_ok{
+        float: right;
+        width: 188px;
+        height: 56px;
+        margin-top: -1px;
+        margin-right: -1px;
+        margin-left: 14px;
+        background-image: linear-gradient(120deg,#37f,#45bede);
+        border: 0;
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        line-height: 56px;
+        text-align: center;
+      }
+      .shop_cart_all_price{
+        float: right;
+        height: 52px;
+        max-width: 300px;
+        line-height: 54px;
+        font-size: 20px;
+        color: #ef636f;
+      }
+      .shop_cart_all_price_text{
+        float: right;
+        width: 50px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 12px;
+        color: #4a4a4a;
+        text-align: right;
+        font-weight: 700;
+      }
+      .shop_cart_all_price_text span{
+        margin-left: 5px;
+        margin-right: 8px;
+      }
+    .shop_cart_all_num_sec{
+      float: right;
+      height: 26px;
+      max-width: 300px;
+      padding-right: 16px;
+      margin-top: 14px;
+      line-height: 26px;
+      border-right: 1px solid #979797;
+      font-size: 12px;
+      color: #4a4a4a;
+      font-weight: 700;
+      text-align: right;
+      }
+
+
+
+      .shop_cart_rec_sec{
+        margin-top: 66px;
+      }
+      .shop_cart_rec_title{
+        float: left;
+      }
+      .shop_cart_rec_change{
+        float: left;
+        height: 30px;
+        margin-top: 6px;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #37f;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+
+      .shop_car_rec{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 34px;
+        margin-bottom: 80px;
+      }
+      .shop_car_rec .shop_rec_item{
+        background-color: #f5f5f5;
+      }
+      
+      .shop_car_rec .shop_rec_head{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      .shop_car_rec .shop_rec_item .shop_rec_price{
+        padding: 0 10px;
+      } 
+      .shop_car_rec .shop_rec_item .shop_rec_price_right{
+        width: 130px;
+      }
+      .shop_car_rec .shop_rec_item .shop_com_title{
+        padding: 0 10px;
+        margin-bottom: 40px;
+      }
+      .shop_car_rec .shop_rec_item:nth-child(2n){
+        margin-left: 0;
+      }
+
+
+      .shop_alert_box{
+        display: none;
+        position: fixed;
+        z-index: 8;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0,.7);
+      }
+      .shop_alert_flex{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .shop_alert_cart_del{
+        width: 638px;
+        height: 250px;
+      }
+      .shop_alert_inner{
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+      }
+      .shop_alert_head{
+        position: relative;
+        height: 62px;
+        line-height: 62px;
+        background-color: #f7f7f7;
+        font-size: 20px;
+        color: #4a4a4a;
+        text-align: center;
+        font-weight: 700;
+      }
+      .shop_alert_close{
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        z-index: 1;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+      .shop_alert_close_svg{
+        display: block;
+        margin:auto;
+      }
+      .shop_alert_close_svg line{
+        stroke: #9b9b9b;
+        stroke-width: 2px;
+      }
+      .shop_alert_cart_del_sec{
+        height: 110px;
+        padding-top: 35px;
+      }
+      .shop_alert_cart_del_text{
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #4a4a4a;
+        text-align: center;
+      }
+      .shop_alert_btn{
+        width: 312px;
+        margin: auto;
+      }
+      .shop_alert_btn>button{
+        float: left;
+        width: 136px;
+        height: 44px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+      .shop_alert_ok{
+        color: #fff;
+        border: 0;
+        background-image: linear-gradient(120deg,#37f,#45bede);
+      }
+      .shop_alert_cancle{
+        margin-left: 40px;
+        border: 1px solid #979797;
+        color: #4a4a4a;
+        background-color: transparent;
+      }
+    </style>
+</head>
+<body>
+<div class="web-frame">
+    <nav class="web-navbar">
+        <div class="navbar-innerFrame">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">
+                    <img src="image/yingdi_logo_w.png">
+                </a>
+                <ul class="bar-list">
+                    <li class="shop active">
+                        <a href="index.html">营地商城</a>
+                    </li>
+                    <li class="taobao">
+                        <a href="#">营地淘宝</a>
+                    </li>
+                    <li class="match">
+                        <a href="#">比赛中心</a>
+                    </li>
+                    <li class="gamecenter">
+                        <a href="#">游戏中心</a>
+                    </li>
+                    <li class="downLoadApp">
+                        <a href="#">下载App</a>
+                    </li>
+                    <li class="yingdi-vip">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <div class="login">
+                    <a href="reg.html">注册</a>
+                    <a href="javascript:loginin()" class="toLoginBtn">登录</a>
+                </div>
+                <div class="user-container"  style="display: none;">
+                    <div class="user-msg" id="ceshi">
+                        <span class="hasMesgNow"></span>
+                        <div class="user-option">
+                            <div style="height: 26px"></div>
+                            <ul class="msgButtonList">
+                                <li class="article_reply_msg">
+                                    <a href="#">收到评论</a>
+                                    <span class="noticeRemark hidden"></span>
+                                </li>
+                                <li class="forum_reply_msg">
+                                    <a href="#">收到回帖</a>
+                                    <span class="noticeRemark hidden"></span>
+                                </li>
+                                <li class="secret_chat_msg">
+                                    <a href="#">我的私信</a>
+                                    <span class="noticeRemark hidden"></span>
+                                </li>
+                                <li class="system_msg">
+                                    <a href="#">系统通知</a>
+                                    <span class="noticeRemark hidden"></span>
+                                </li>
+                                <li class="public_msg">
+                                    <a href="#">系统公告</a>
+                                    <span class="noticeRemark hidden"></span>
+                                </li>
+                            </ul>
+                        </div>
+                         
+                    </div>
+                    <div class="user-avatar">
+                        <img src="image/defaultavatar.png" class="userHeadImg">
+                        <div class="user-option">
+                            <div style="height: 26px;"></div>
+                            <ul class="myButtonList">
+                                <li class='user-detail'>
+                                    <div class="user-name">silverbulletlee</div>
+                                    <div class="user-fire">营火:850</div>
+                                </li>
+                                <li class="item myhome-page">
+                                    <a href="#">我的主页</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">我的营地</a>
+                                </li>
+                                <li  class="item">
+                                    <a href="#">资料设置</a>
+                                </li>
+                                <li class="toLogout">退出登录</li>
+                            </ul>
+                            <img src="image/normal.png" class="userBorder">
+                        </div>    
+                    </div>
+
+                </div>
+                <div class="to-coutribute">我要投稿</div>
+                <div class="navbar-searchInputInner"></div>
+            </div>
+        </div>
+        <div class="navbar-menuFrame">
+            <ul>
+                <li>
+                    <a href="#">推荐</a>
+                </li>
+                <li>
+                    <a href="#">炉石传说</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">炉石传说首页</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">精选文集</a></li>
+                        <li><a href="#">直播聚合</a></li>
+                        <li><a href="#">模拟开包</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">万智牌</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">万智牌首页</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">精选文集</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">游戏王</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">游戏王首页</a></li>
+                        <li><a href="#">精选文集</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">影之诗</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">影之诗首页</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">精选文集</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">昆特牌</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">昆特牌首页</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">精选文集</a></li>
+                        <li><a href="#">直播聚合</a></li>
+                        <li><a href="#">开桶助手</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">阴阳师：百闻牌</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">百闻牌首页</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">符文之地传奇</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">卡牌查询</a></li>
+                        <li><a href="#">套牌合集</a></li>
+                        <li><a href="#">套牌广场</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">宝可梦卡牌</a>
+                </li>
+                <li>
+                    <a href="#">红与蓝</a>
+                </li>
+                <li>
+                    <a href="#">斗福</a>
+                </li>
+                <li>
+                    <a href="#">桌面游戏</a>
+                </li>
+                <li>
+                    <a href="#">日本麻将</a>
+                </li>
+                <li>
+                    <a href="#">LOL：云顶之弈</a>
+                </li>
+                <li>
+                    <a href="#">刀塔霸业</a>
+                </li>
+                <li>
+                    <a href="#">剑与远征</a>
+                </li>
+                <li>
+                    <a href="#">玩家杂谈</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">玩家杂谈首页</a></li>
+                        <li><a href="#">影视</a></li>
+                        <li><a href="#">读书</a></li>
+                        <li><a href="#">历史</a></li>
+                        <li><a href="#">生活</a></li>
+                        <li><a href="#">音乐</a></li>
+                        <li><a href="#">科技</a></li>
+                        <li><a href="#">美食</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">二次元</a>
+                </li>
+                <li>
+                    <a href="#">同人绘画</a>
+                </li>
+                <li>
+                    <a href="#">同人文学</a>
+                </li>
+                <li>
+                    <a href="#">营地电台</a>
+                </li>
+                <li>
+                    <a href="#">PC游戏</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">英雄联盟</a></li>
+                        <li><a href="#">守望先锋</a></li>
+                        <li><a href="#">风暴英雄</a></li>
+                        <li><a href="#">电游打折优惠</a></li>
+                        <li><a href="#">流放之路</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">主机游戏</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">主机游戏</a></li>
+                        <li><a href="#">任天堂NS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">手机游戏</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">虚荣</a></li>
+                        <li><a href="#">燃烧王座</a></li>
+                        <li><a href="#">明日方舟</a></li>
+                        <li><a href="#">糖果缤纷乐</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">更多棋牌</a>
+                    <ul class="sub-level-menu">
+                        <li><a href="#">卡牌游戏</a></li>
+                        <li><a href="#">Artifact</a></li>
+                        <li><a href="#">上古卷轴：传奇</a></li>
+                        <li><a href="#">天神学院</a></li>
+                        <li><a href="#">2047</a></li>
+                        <li><a href="#">皇室战争</a></li>
+                        <li><a href="#">多多自走棋</a></li>
+                        <li><a href="#">赤潮自走棋</a></li>
+                        <li><a href="#">阴阳师自走棋</a></li>
+                        <li><a href="#">Mythgard</a></li>
+                        <li><a href="#">仙剑奇侠传：九野</a></li>
+                        <li><a href="#">战歌竞技场</a></li>
+                        <li><a href="#">斩兽之刃</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="web-content">
+      <div class="shop_car_box">
+        <div class="shop_base_title" id="shop_cart_title">购物车</div>
+        <div class="shop_cart_emp" style="display: none;">
+          <p class="shop_cart_emp_text">
+            空空如也，
+            <a href="index.html" class="shop_cart_emp_link">去逛逛</a>
+            <svg class="shop_cart_emp_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="12" height="16">
+              <polyline points="0,0 10,8 0,16"></polyline> 
+            </svg>
+          </p>
+
+        </div>
+
+        <div class="shop_cart_sec">
+          <div class="shop_cart_head clearfix">
+            <span>商品</span>
+            <span>价格</span>
+            <span>数量</span>
+            <span>小计</span>
+            <span>操作</span>
+          </div>
+          <div class="shop_cart_list">
+            <div class="shop_cart_item clearfix">
+              <div class="shop_cart_choose_sec">
+                <button class="shop_cart_choose_btn">
+                  <svg class="shop_cart_choose_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="7" height="5">
+                    <polyline points="0,2 3,5 7,0"></polyline> 
+                  </svg>
+                </button>
+              </div>
+              <div class="shop_cart_head_sec">
+                <a href="#">
+                  <img src="image/sp5.jpg" class="shop_cart_head_img">
+                </a>
+              </div>
+              <div class="shop_cart_title_sec">
+                <a href="#">
+                  <p class="shop_cart_title_text text-overflow">
+                    【秋装】彩窗黑莲花
+                  </p>
+                  <p class="shop_cart_text_des">圆领卫衣-黑色-4XL</p>
+                </a>
+              </div>
+              <p class="shop_cart_price text-overflow">￥199.00</p>
+              <div class="shop_cart_num_sec">
+                <div class="shop_cart_num_ope clearfix">
+                  <button class="shop_cart_num_dec">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                    </svg>                   
+                  </button>
+                  <input value="1" class="shop_cart_num_input">
+                  <button class="shop_cart_num_inc">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                      <line x1='9' y1='0' x2='9' y2='18'></line> 
+                    </svg>                   
+                  </button>
+                </div>
+                <p class="shop_cart_num_tip text-overflow"></p>
+              </div>
+              <p class="shop_cart_st_sec text-overflow">￥199.00</p>
+              <div class="shop_cart_del_sec">
+                <button class="shop_cart_del_btn">
+                  <svg class="shop_cart_del_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="12" height="12">
+                    <line x1='0' y1='0' x2='12' y2='12'></line> 
+                    <line x1='12' y1='0' x2='0' y2='12'></line> 
+                  </svg>  
+                </button>
+              </div>
+            </div>
+            <div class="shop_cart_item clearfix">
+              <div class="shop_cart_choose_sec">
+                <button class="shop_cart_choose_btn">
+                  <svg class="shop_cart_choose_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="7" height="5">
+                    <polyline points="0,2 3,5 7,0"></polyline> 
+                  </svg>
+                </button>
+              </div>
+              <div class="shop_cart_head_sec">
+                <a href="#">
+                  <img src="image/sp5.jpg" class="shop_cart_head_img">
+                </a>
+              </div>
+              <div class="shop_cart_title_sec">
+                <a href="#">
+                  <p class="shop_cart_title_text text-overflow">
+                    【秋装】彩窗黑莲花
+                  </p>
+                  <p class="shop_cart_text_des">圆领卫衣-黑色-4XL</p>
+                </a>
+              </div>
+              <p class="shop_cart_price text-overflow">￥199.00</p>
+              <div class="shop_cart_num_sec">
+                <div class="shop_cart_num_ope clearfix">
+                  <button class="shop_cart_num_dec">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                    </svg>                   
+                  </button>
+                  <input value="1" class="shop_cart_num_input">
+                  <button class="shop_cart_num_inc">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                      <line x1='9' y1='0' x2='9' y2='18'></line> 
+                    </svg>                   
+                  </button>
+                </div>
+                <p class="shop_cart_num_tip text-overflow"></p>
+              </div>
+              <p class="shop_cart_st_sec text-overflow">￥199.00</p>
+              <div class="shop_cart_del_sec">
+                <button class="shop_cart_del_btn">
+                  <svg class="shop_cart_del_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="12" height="12">
+                    <line x1='0' y1='0' x2='12' y2='12'></line> 
+                    <line x1='12' y1='0' x2='0' y2='12'></line> 
+                  </svg>  
+                </button>
+              </div>
+            </div>
+            <div class="shop_cart_item clearfix">
+              <div class="shop_cart_choose_sec">
+                <button class="shop_cart_choose_btn">
+                  <svg class="shop_cart_choose_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="7" height="5">
+                    <polyline points="0,2 3,5 7,0"></polyline> 
+                  </svg>
+                </button>
+              </div>
+              <div class="shop_cart_head_sec">
+                <a href="#">
+                  <img src="image/sp5.jpg" class="shop_cart_head_img">
+                </a>
+              </div>
+              <div class="shop_cart_title_sec">
+                <a href="#">
+                  <p class="shop_cart_title_text text-overflow">
+                    【秋装】彩窗黑莲花
+                  </p>
+                  <p class="shop_cart_text_des">圆领卫衣-黑色-4XL</p>
+                </a>
+              </div>
+              <p class="shop_cart_price text-overflow">￥199.00</p>
+              <div class="shop_cart_num_sec">
+                <div class="shop_cart_num_ope clearfix">
+                  <button class="shop_cart_num_dec">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                    </svg>                   
+                  </button>
+                  <input value="1" class="shop_cart_num_input">
+                  <button class="shop_cart_num_inc">
+                    <svg class="shop_cart_num_dec_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="18" height="18">
+                      <line x1='0' y1='9' x2='18' y2='9'></line> 
+                      <line x1='9' y1='0' x2='9' y2='18'></line> 
+                    </svg>                   
+                  </button>
+                </div>
+                <p class="shop_cart_num_tip text-overflow"></p>
+              </div>
+              <p class="shop_cart_st_sec text-overflow">￥199.00</p>
+              <div class="shop_cart_del_sec">
+                <button class="shop_cart_del_btn">
+                  <svg class="shop_cart_del_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="12" height="12">
+                    <line x1='0' y1='0' x2='12' y2='12'></line> 
+                    <line x1='12' y1='0' x2='0' y2='12'></line> 
+                  </svg>  
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="shop_cart_all">
+            <div class="shop_cart_all_choose_sec clearfix">
+              <button class="shop_cart_all_choose_btn">
+                <svg class="shop_cart_all_choose_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="7" height="5">
+                  <polyline points="0,2 3,5 7,0"></polyline> 
+                </svg>
+              </button>
+              <span class="shop_cart_all_choose_text">全选</span>
+            </div>
+            <a href="#" class="shop_cart_all_ok user-select">结算</a>
+            <p class="shop_cart_all_price text-overflow">0</p>
+            <p class="shop_cart_all_price_text text-overflow">总计
+              <span>:</span>
+            </p>
+            <p class="shop_cart_all_num_sec">共
+              <span class="shop_cart_all_num">0</span>
+              件商品
+              <span class="shop_card_all_full_main">，还差200元，普通快递免邮费</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="shop_cart_rec_sec">
+          <div class="shop_base_title clearfix">
+            <div class="shop_cart_rec_title">推荐</div>
+            <button class="shop_cart_rec_change">换一换</button>
+          </div>
+          <div class="shop_car_rec">
+            <div class="shop_rec_item scale_box">
+              <a href="#" class="shop_rec_item_link">
+                <div class="shop_rec_head">
+                  <img src="http://wspic.iyingdi.cn/common/2019/05/08/7329d675-3622-452a-aa4d-0dfef0903996.jpg" class="shop_rec_item_img">
+                </div>
+                <div class="shop_rec_price clearfix">
+                  <div class="shop_rec_price_left text-overflow">￥88.00</div>
+                  <div class="shop_rec_price_right text-overflow">
+                    原价
+                    <span class="shop_rec_price_del">￥99.00</span>
+                  </div>
+                </div>
+                <p class="shop_com_title">"克总来电"T恤 纯白底色</p>
+              </a>
+            </div>
+            <div class="shop_rec_item scale_box">
+              <a href="#" class="shop_rec_item_link">
+                <div class="shop_rec_head">
+                  <img src="http://wspic.iyingdi.cn/common/2019/05/08/7329d675-3622-452a-aa4d-0dfef0903996.jpg" class="shop_rec_item_img">
+                </div>
+                <div class="shop_rec_price clearfix">
+                  <div class="shop_rec_price_left text-overflow">￥88.00</div>
+                  <div class="shop_rec_price_right text-overflow">
+                    原价
+                    <span class="shop_rec_price_del">￥99.00</span>
+                  </div>
+                </div>
+                <p class="shop_com_title">"克总来电"T恤 纯白底色</p>
+              </a>
+            </div>
+            <div class="shop_rec_item scale_box">
+              <a href="#" class="shop_rec_item_link">
+                <div class="shop_rec_head">
+                  <img src="http://wspic.iyingdi.cn/common/2019/05/08/7329d675-3622-452a-aa4d-0dfef0903996.jpg" class="shop_rec_item_img">
+                </div>
+                <div class="shop_rec_price clearfix">
+                  <div class="shop_rec_price_left text-overflow">￥88.00</div>
+                  <div class="shop_rec_price_right text-overflow">
+                    原价
+                    <span class="shop_rec_price_del">￥99.00</span>
+                  </div>
+                </div>
+                <p class="shop_com_title">"克总来电"T恤 纯白底色</p>
+              </a>
+            </div>
+            <div class="shop_rec_item scale_box">
+              <a href="#" class="shop_rec_item_link">
+                <div class="shop_rec_head">
+                  <img src="http://wspic.iyingdi.cn/common/2019/05/08/7329d675-3622-452a-aa4d-0dfef0903996.jpg" class="shop_rec_item_img">
+                </div>
+                <div class="shop_rec_price clearfix">
+                  <div class="shop_rec_price_left text-overflow">￥88.00</div>
+                  <div class="shop_rec_price_right text-overflow">
+                    原价
+                    <span class="shop_rec_price_del">￥99.00</span>
+                  </div>
+                </div>
+                <p class="shop_com_title">"克总来电"T恤 纯白底色</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="shop_tool_box">
+          <div class="shop_tool">
+              <a href="shopcar.html" class="shop_tool_cart">购物车</a>
+              <a href="#" class="shop_tool_server">客服</a>
+              <a href="#" class="shop_tool_orders">订单</a>
+              <a href="#" class="shop_tool_top"></a>  
+          </div>
+        </div>
+      </div>
+      
+      <div class="shop_alert_box shop_alert_cart_del_box">
+        <div class="shop_alert_flex">
+          <div class="shop_alert_inner shop_alert_cart_del">
+            <div class="shop_alert_head">
+              删除商品
+              <button class="shop_alert_close">
+                <svg class="shop_alert_close_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="10" height="10">
+                  <line x1='0' y1='0' x2='10' y2='10'></line> 
+                  <line x1='10' y1='0' x2='0' y2='10'></line>
+                </svg>
+              </button>  
+            </div>
+            <div class="shop_alert_body">
+              <div class="shop_alert_cart_del_sec">
+                <p class="shop_alert_cart_del_text">确定要从购物车移除此商品吗？</p>
+              </div>
+              <div class="shop_alert_btn clearfix">
+                <button class="shop_alert_ok shop_alert_cart_yes">确认删除</button>
+                <button class="shop_alert_cancle shop_alert_cart_no">取消删除</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <div class="overlay" id="bggray"></div>
+    <div class="login_frame" id="loginwin">
+            <div class="login_frame_top">
+                <a href="javascript:close()" class="close">
+                    <img src="image/close.png">
+                </a>
+                <div class="login_logoImg">
+                    <img src="image/logo1.png">
+                </div>
+                <div class="switchLogin" id="login-switch">
+                    <img src="image/qr.png">
+                </div>
+            </div>
+            <div class="login_frame_content">
+                <div class="form-group">
+                    <input type="text" placeholder="用户名"  id='phonelog'>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="密码"  id='upwdlog'>
+                </div>
+                <div class="form_other">
+                    <div class="user_inputWarning"></div>
+                    <div class="checkbox">
+                        <label class="small">
+                            <input type="checkbox" checked id="login_state">
+                            记住登录状态
+                        </label>
+                    </div>
+                    <div class="register">
+                        <span>没有账号？</span><a href="reg.html" style="margin-right: 20px;">立即注册</a><a href="#">忘记密码?</a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 4px;">
+                    <button class="loginBtn" onclick="log()">登录</button>
+                    <div class="thirdPart">
+                        <span>第三方账号登录</span>
+                        <div class="icon" id="login_weixin"></div>
+                        <div class="icon" id="qq_connect_btn"></div>
+                    </div>
+                </div>                
+            </div>
+            <div class="login_frame_qrcode hidden">
+                <div class="passMsg">使用密码登录</div>
+                <div class="photo">
+                    <div class="image">
+                        <img src="#" class="qr">
+                        <div class="tutorial">
+                            <img src="#"class="qr">
+                        </div>
+                    </div>
+                    <p>打开最新旅法师营地App</p>
+                    <p>在个人中心页面右上角打开扫一扫</p>
+                </div>
+                <div class="result hidden">
+                    <div class="image">
+                        <img src="#">
+                    </div>
+                    <p>扫描成功，请在手机上确认登录</p>
+                    <a href="#">返回二维码</a>
+                </div>
+            </div>
+    </div>
+
+  <script>
+    var btndec=document.getElementsByClassName("shop_cart_num_dec");
+    for (var n of btndec){
+      n.onclick=function(){
+        var input=this.nextElementSibling;
+        var count=parseInt(input.value);
+        if(count>1){
+          count--;
+        }
+        input.value=count;
+        var sec=this.parentElement.parentElement.nextElementSibling;
+        var price=parseFloat(this.parentElement.parentElement.previousElementSibling.innerHTML.slice(1));
+        sec.innerHTML=`￥${(count*price).toFixed(2)}`;
+        var total=0;
+        var all_price=document.querySelector(".shop_cart_all_price");
+        var secs=document.querySelectorAll(".shop_cart_st_sec");
+        for (var i of secs){
+          total+=parseFloat(i.innerHTML.slice(1));
+        }
+        all_price.innerHTML=`￥${total.toFixed(2)}`;
+      }
+    }
+
+    var btninc=document.getElementsByClassName("shop_cart_num_inc");
+    for (var n of btninc){
+      n.onclick=function(){
+        var input=this.previousElementSibling;
+        var count=parseInt(input.value);
+        count++;
+        input.value=count;
+        var sec=this.parentElement.parentElement.nextElementSibling;
+        var price=parseFloat(this.parentElement.parentElement.previousElementSibling.innerHTML.slice(1));
+        sec.innerHTML=`￥${(count*price).toFixed(2)}`;
+        var total=0;
+        var all_price=document.querySelector(".shop_cart_all_price");
+        var secs=document.querySelectorAll(".shop_cart_st_sec");
+        for (var i of secs){
+          total+=parseFloat(i.innerHTML.slice(1));
+        }
+        all_price.innerHTML=`￥${total.toFixed(2)}`;
+      }
+    }
+    var all_check=document.getElementsByClassName("shop_cart_all_choose_btn");
+    var choose_btn=document.getElementsByClassName("shop_cart_choose_btn");
+    for (var btn of choose_btn){
+      btn.onclick=function(){
+        var svg=this.firstElementChild;
+        if(svg.style.display==="block"){
+          svg.style.display="none";
+          all_check[0].firstElementChild.style.display="none";
+        }else{
+          svg.style.display="block";
+          var svgs=document.querySelectorAll(".shop_cart_choose_svg");
+          if((svgs[0].style.display===svgs[1].style.display)&&(svgs[1].style.display===svgs[2].style.display)&&(svgs[2].style.display==="block")){
+            all_check[0].firstElementChild.style.display="block";
+          }         
+          
+        }
+      }
+    }    
+    all_check[0].onclick=function(){
+      var svg=all_check[0].firstElementChild;
+      if(svg.style.display==="block"){
+        svg.style.display="none";
+        for(let btn of choose_btn){
+          btn.firstElementChild.style.display="none"
+        }
+      }else{
+        svg.style.display="block";
+        for(let btn of choose_btn){
+          btn.firstElementChild.style.display="block"
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+  </script>
+
+
+</div>
+</body>
+</html>

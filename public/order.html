@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product</title>
+  <link rel="icon" href="image/favicon.ico">
+  <link rel="stylesheet" href="css/pub_header.css">
+  <script src="js/login.js"></script> 
+  <style>
+    .shop_ct_box{
+      position: relative;
+      width: 1200px;
+      margin: auto;
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+    .shop_base_title{
+      height: 38px;
+      line-height: 38px;
+      font-size: 26px;
+      color: #4a4a4a;
+    }
+    .shop_address_box{
+      min-height: 132px;
+      margin-top: 24px;
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+    }
+    .shop_address_text{
+      height: 28px;
+      line-height: 28px;
+      font-size: 20px;
+      color: #4a4a4a;
+    }
+    .shop_address_text>a{
+      color: #37f;
+      text-decoration: underline;
+    }
+    .shop_address_box2{
+      display: block;
+      min-height: 132px;
+      margin-top: 24px;
+      margin-bottom: 48px;
+      padding: 23px 41px 23px 31px;
+      background-color: #f7f7f7;
+    }
+    .shop_address_boxleft{
+      float: left;
+      width: 1000px;
+    }
+    .shop_address_row1{
+      height: 24px;
+      line-height: 24px;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_default_add.png);
+      background-repeat: no-repeat;
+      background-size: 16px auto;
+      background-position: 0 4px;
+    }
+    .shop_address_row1_text{
+      margin-left: 23px;
+      font-size: 14px;
+      color: #9b9b9b;
+    }
+    .shop_address_row1_btn{
+      width: 68px;
+      height: 24px;
+      margin-left: 15px;
+      font-size: 14px;
+      color: #37f;
+      background-color: #fff;
+      border:1px dashed rgba(51, 119, 255, .45);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .shop_address_row2{
+      height: 20px;
+      margin-top: 12px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_address_row2_name{
+      float: left;
+    }
+    .shop_address_row2_name>span+span{
+      margin-left: 5px;
+    }
+    .shop_address_row2_phone{
+      float: left;
+      margin-left: 38px;
+    }
+    .shop_address_row2_phone>span+span{
+      margin-left: 5px;
+    }
+    .shop_address_row3{
+      height: 20px;
+      margin-top: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_address_row3>span+span{
+      margin-left: 5px;
+    }
+    .shop_address_boxright{
+      float: right;
+      width: 100px;
+    }
+    .shop_address_boxright_change{
+      float: right;
+      width: 90px;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ff8e00;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      text-align: center;
+    }
+    .shop_address_boxright_add{
+      float: right;
+      width: 90px;
+      height: 28px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #787878;
+      background-color: transparent;
+      border: 1px solid #9b9b9b;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+
+
+    .shop_ct_order{
+      border: 1px solid #eaeaea;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .shop_ct_order_head{
+      height: 58px;
+      background-color: #f0f0f0;
+      display: flex;
+    }
+    .shop_ct_order_head>div{
+      height: 58px;
+      line-height: 58px;
+      font-size: 14px;
+      color: #787878;
+      text-align: center;
+    }
+    .shop_ct_order_head>div:first-child{
+      width: 474px;
+    }
+    .shop_ct_order_head>div:nth-child(2){
+      width: 150px;
+    }
+    .shop_ct_order_head>div:nth-child(3){
+      width: 118px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .shop_ct_order_head>div:nth-child(3)>p:first-child{
+      height: 20px;
+      line-height: 20px;
+      font-size: 16px;
+    }
+    .shop_ct_order_head>div:nth-child(3)>p:last-child{
+      height: 14px;
+      line-height:14px;
+      font-size: 12px;
+    }
+    .shop_ct_order_head>div:nth-child(4){
+      width: 200px;
+    }
+    .shop_ct_order_head>div:nth-child(5){
+      width: 56px;
+    }
+    .shop_ct_order_head>div:nth-child(6){
+      width: 200px;
+    }
+    .shop_ct_order_body{
+      padding: 24px 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+    .shop_ct_order_product{
+      padding-left: 31px;
+    }
+    .shop_ct_order_img{
+      float: left;
+      border-radius: 6px;
+      width: 84px;
+      height: 84px;
+      overflow: hidden;      
+    }
+    .shop_ct_order_img>img{
+      width: 100%;
+      height: 100%;
+    }
+    .shop_ct_order_name{
+      float: left;
+      width: 359px;
+      height: 84px;
+      padding-left: 34px;
+    }
+    .shop_ct_order_name1{
+      height: 22px;
+      font-size: 16px;
+      margin-top: 18px;
+      color: #4a4a4a;
+    }
+    .shop_ct_order_name2{
+      height: 32px;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #9b9b9b;
+      overflow: hidden;
+      line-height: 16px;
+    }
+    .shop_ct_order_type{
+      float: left;
+      width: 150px;
+      height: 84px;
+      line-height: 84px;
+      font-size: 16px;
+      text-align: center;
+      color: #4a4a4a;
+    }
+    .shop_ct_order_fire{
+      float: left;
+      width: 118px;
+      height: 84px;
+    }
+    .shop_ct_order_fire_box{
+      margin-top: 20px;
+    }
+    .shop_ct_order_fire_box>input{
+      float: left;
+      width: 44px;
+      height: 26px;
+      margin-left: 15px;
+      outline: 0;
+      text-align: center;
+      font-size: 16px;
+      color: #4a4a4a;
+      border: 1px solid #979797;
+    }
+    .shop_ct_order_fire_box>span{
+      float: left;
+      height: 26px;
+      margin-left: 5px;
+      line-height: 30px;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+    .shop_ct_order_fire_tip{
+      position: relative;
+      z-index: 2;
+      width: 130px;
+      height: 16px;
+      line-height: 16px;
+      margin-left: -16px;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #ef636f;
+      text-align: center;
+    }
+    .shop_ct_order_price{
+      float: left;
+      width: 200px;
+      height: 84px;
+      line-height: 84px;
+      font-size: 16px;
+      color: #4a4a4a;
+      text-align: center;
+    }
+    .shop_ct_order_num{
+      float: left;
+      width: 56px;
+      height: 84px;
+      line-height: 84px;
+      font-size: 16px;
+      color: #4a4a4a;
+      text-align: center;
+    }
+    .shop_ct_order_clu{
+      float: left;
+      width: 200px;
+      height: 84px;
+      line-height: 84px;
+      font-size: 16px;
+      color: #ef636f;
+      text-align: center;
+    }
+    .shop_ct_order_foot{
+      padding: 20px 0 35px;
+    }
+    .shop_ct_order_send_left{
+      float: left;
+      width: 998px;
+      padding-left: 31px;
+    }
+    .shop_ct_order_send_type,.shop_ct_order_pay_type{
+      min-height: 34px;
+      line-height: 34px;
+    }
+    .shop_order_send_key,.shop_order_pay_key{
+      float: left;
+      width: 84px;
+      height: 100%;
+      font-size: 12px;
+      color: #4a4a4a;      
+    }
+    .shop_order_send_list,.shop_order_pay_list{
+      float: left;
+      width: 880px;
+      height: 100%;
+    }
+    .shop_order_send_list>div,.shop_order_pay_list>div{
+      margin-right: 40px;
+      margin-bottom: 20px;
+    }
+    .shop_ct_order_send_item,.shop_ct_order_pay_item{
+      float: left;
+      max-width: 100%;
+      min-width: 110px;
+      height: 34px;
+      padding: 0 10px;
+      border: 1px solid #9b9b9b;
+      font-size: 12px;
+      color: #4a4a4a;
+      text-align: center;
+      cursor: pointer;
+    }
+    .shop_ct_order_send_item.shop_ct_order_active,.shop_ct_order_pay_item.shop_ct_order_active{
+      position: relative;
+      border: 1px solid #37f;
+    }
+    .shop_ct_order_send_item.shop_ct_order_active::after,.shop_ct_order_pay_item.shop_ct_order_active::after{
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      z-index: 1;
+      width: 10px;
+      height: 10px;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_send_choosed.png);
+      background-repeat: no-repeat;
+      background-size: 10px 10px;
+    }
+    .shop_ct_order_send_full{
+      float: left;
+      font-size: 14px;
+      color: #a8a8a8;
+      height: 14px;
+      line-height: 14px;
+      margin-top: 18px;
+      padding: 0;
+    }
+    .shop_ct_order_send_other{
+      height: 30px;
+      margin-top: 24px;
+    }
+    .shop_ct_order_send_other_key{
+      float: left;
+      height: 100%;
+      width: 84px;
+      line-height: 30px;
+      font-size: 12px;
+      color: #4a4a4a;
+    }
+    .shop_ct_order_send_other_tip{
+      float: left;
+      width: 410px;
+      height: 30px;
+      background-color: #eee;
+    }
+    .shop_ct_order_send_other_input{
+      float: left;
+      width: 300px;
+      height: 18px;
+      margin-top: 6px;
+      margin-left: 13px;
+      font-size: 12px;
+      color: #9b9b9b;
+      outline: 0;
+      border: 0;
+      background-color: #eee;
+    }
+    .shop_ct_order_send_other_input::placeholder{
+      opacity: 0.8;
+    }
+    .shop_ct_order_send_other_limit{
+      float: right;
+      width: 40px;
+      height: 18px;
+      margin-top: 6px;
+      margin-right: 12px;
+      text-align: right;
+    }
+    .shop_ct_email_box{
+      display: none;
+      margin-top: 10px;
+    }
+    .shop_ct_order_send_right{
+      padding-top: 5px;
+      float: right;
+      width: 200px;
+    }
+    .shop_ct_order_send_price{
+      height: 22px;
+      line-height: 22px;
+      font-size: 16px;
+      color: #ef636f;
+      text-align: center;
+    }
+
+
+    .shop_ct_end{
+      margin-top: 42px;
+      padding: 18px 55px 24px 0;
+      background-color: #f7f7f7;
+    }
+    .shop_ct_end_pay_num{
+      float: right;
+      padding-left: 60px;
+    }
+    .shop_ct_end_pay_money{
+      height: 28px;
+      line-height: 28px;
+      font-size: 20px;
+      color: #e5746b;
+      text-align: right;
+      max-width: 800px;
+    }
+    .shop_ct_end_pay_money+.shop_ct_end_pay_fire{
+      margin-top: 4px;
+    }
+    .shop_ct_end_pay_fire{
+      float: right;
+      height: 28px;
+      margin-top: 0;
+      padding-left: 17px;
+      line-height: 28px;
+      font-size: 20px;
+      color: #e5746b;
+      text-align: right;
+      max-width: 800px;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_fire.png);
+      background-repeat: no-repeat;
+      background-size: 13px 18px;
+      background-position: 0 5px;
+    }
+    .shop_ct_end_pay_text{
+      float: right;
+      height: 28px;
+      line-height: 28px;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+    .shop_ct_end_buyer{
+      height: 22px;
+      line-height: 22px;
+      font-size: 16px;
+      margin-top: 8px;
+      color: #4a4a4a;
+    }
+    .shop_ct_ok_sec{
+      height: 54px;
+      margin-top: 25px;
+    }
+    .shop_ct_ok{
+      float: right;
+      width: 188px;
+      height: 54px;
+      background-image: linear-gradient(120deg,#37f,#45bede);
+      border: 0;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+
+    .shop_alert_box{
+      display: none;
+      position: fixed;
+      z-index: 8;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgba(0,0,0,.7);
+    }
+    .shop_alert_flex{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .shop_alert_add,.shop_alert_ch,.shop_alert_pay{
+      width: 686px;
+      height: 508px;
+    }
+    .shop_alert_inner{
+      border-radius: 6px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    .shop_alert_head{
+      position: relative;
+      height: 62px;
+      line-height: 62px;
+      background-color: #f7f7f7;
+      font-size: 20px;
+      color: #4a4a4a;
+      text-align: center;
+      font-weight: 700;
+    }
+    .shop_alert_add .shop_alert_body{
+      padding: 0 78px;
+    }
+    .shop_alert_add_b1{
+      height: 34px;
+      margin-top: 24px;
+    }
+    .shop_alert_add_b1l{
+      float: left;
+      height: 100%;
+    }
+    .shop_alert_add_b1l_key{
+      float: left;
+      height: 100%;
+      line-height: 34px;
+      font-size: 14px;
+      color: #4a4a4a;
+      width: 56px;
+      text-align: justify;
+    }
+    .shop_alert_add_b1l_key::after{
+      content: '';
+      width: 100%;
+      display: inline-block;
+    }
+    .shop_alert_add_divider{
+      float: left;
+      height: 30px;
+      margin-left: 5px;
+      margin-right: 14px;
+      line-height: 30px;
+    }
+    .shop_alert_add_b1l_val{
+      float: left;
+      width: 162px;
+      height: 34px;
+      border: 1px solid #d8d8d8;
+      outline: 0;
+      text-indent: 10px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_alert_add_b1l_val::placeholder{
+      opacity: 0.8;
+    }
+    .shop_alert_add_b1r{
+      float: left;
+      margin-left: 43px;
+      height: 100%;
+    }
+    .shop_alert_add_b1r_key{
+      float: left;
+      height: 100%;
+      line-height: 34px;
+      font-size: 14px;
+      color: #4a4a4a;
+      width: 56px;
+      text-align: justify;
+    }
+    .shop_alert_add_b1r_val{
+      float: left;
+      width: 162px;
+      height: 34px;
+      border: 1px solid #d8d8d8;
+      outline: 0;
+      text-indent: 10px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_alert_add_b2{
+      position: relative;
+      margin-top: 24px;
+      height: 34px;
+    }
+    .shop_alert_add_a_key{
+      float: left;
+      height: 34px;
+      width: 56px;
+      line-height: 34px;
+      font-size: 14px;
+      color: #4a4a4a;
+      text-align: justify;
+    }
+
+    .shop_alert_add_pro,.shop_alert_add_city,.shop_alert_add_area{
+      position: relative;
+      float: left;
+      width: 130px;
+      height: 34px;
+      line-height: 34px;
+      padding-right: 20px;
+      border: 1px solid #d8d8d8;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 14px;
+      color: #4a4a4a;
+      text-align: left;
+      text-indent: 14px;
+    }
+    .shop_alert_add_pro::after,.shop_alert_add_city::after,.shop_alert_add_area::after{
+      position:absolute;
+      top: 16px;
+      right: 14px;
+      z-index: 1;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 4px solid #000;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+    }
+    .shop_alert_add_city,.shop_alert_add_area{
+      margin-left: 28px;
+    }
+    .shop_alert_add_pro_list,.shop_alert_add_city_list,.shop_alert_add_area_list{
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 79px;
+      z-index: 1;
+      width: 130px;
+      height: 274px;
+      border: 1px solid #d8d8d8;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    .shop_alert_add_city_list{
+      left: 237px;
+    }
+    .shop_alert_add_area_list{
+      left: 395px;
+    }
+    .shop_alert_add_item{
+      height: 34px;
+      line-height: 34px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #4a4a4a;
+      text-align: left;
+      text-indent: 14px;
+      user-select: none;
+    }
+    .shop_alert_add_item+.shop_alert_add_item{
+      border-top: 1px solid #d8d8d8;
+    }
+    .shop_alert_add_b3{
+      margin-top: 10px;
+    }
+    .shop_alert_add_det_key{
+      width: 56px;
+      height: 30px;
+      float: left;
+      line-height: 30px;
+      font-size: 14px;
+      text-align: justify;
+      color: #4a4a4a;
+    }
+    .shop_alert_add_det_text{
+      float: left;
+      width: 446px;
+      height: 180px;
+      padding: 10px;
+      border: 1px solid #d8d8d8;
+      outline: 0;
+      font-size: 14px;
+      color: #4a4a4a;
+      resize: none;
+    }
+    .shop_alert_add_b4{
+      margin-top: 22px;
+    }
+    .shop_alert_add_b4_btn{
+      float: left;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #37f;
+      border-radius: 3px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .shop_alert_add_b4_btn_svg{
+      margin: 0 auto;
+      display: block;
+    }
+    .shop_alert_add_b4_btn_svg>polyline{
+      fill: none;
+      stroke: #37f;
+    }
+    .shop_alert_add_b4_text{
+      float: left;
+      height: 16px;
+      margin-left: 8px;
+      line-height: 16px;
+      font-size: 12px;
+      color: #787878;
+    }
+    .shop_alert_add_b5{
+      margin-top: 24px;
+    }
+    .shop_alert_add_save{
+      float: left;
+      width: 136px;
+      height: 34px;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-left: 108px;
+      cursor: pointer;
+      border: 0;
+      color: #fff;
+      background-image: linear-gradient(120deg,#37f,#45bede);
+    }
+    .shop_alert_add_cancle{
+      float: left;
+      width: 136px;
+      height: 34px;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 40px;
+      color: #4a4a4a;
+      border: 1px solid #979797;
+      background-color: transparent;
+    }
+
+
+    .shop_alert_ch_list{
+      width: 646px;
+      height: 354px;
+      margin: 10px auto 0;
+      overflow-y: auto;
+    }
+    .shop_alert_ch_item{
+      position: relative;
+      height: 82px;
+      /* border: 1px solid #ecf1f5; */
+      border: 1px solid #37f;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .shop_alert_ch_item::after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_send_choosed.png);
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      content: "";
+    }
+    .shop_alert_ch_itemleft{
+      float: left;
+      width: 450px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_alert_ch_itemleft p{
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .shop_alert_ch_itemleft_r1{
+      height: 30px;
+    }
+    .shop_alert_ch_itemleft_r1>p{
+      height: 30px;
+      line-height: 30px;
+    }
+    .shop_alert_ch_itemleft_r1>p{
+      float: left;
+    }
+    .shop_alert_ch_itemleft_r1>p:last-child{
+      margin-left: 40px;
+    }
+    .shop_alert_ch_itemleft_r1>p>span{
+      float: left;
+    }
+    .shop_alert_ch_itemleft p>span:first-child{
+      width: 56px;text-align: justify;margin-right: 6px;
+    }
+    .shop_alert_ch_itemleft_r2{
+      height: 30px;
+      line-height: 30px;
+    }
+    .shop_alert_ch_itemright{
+      float: right;
+      padding-top: 42px;
+    }
+    .shop_alert_ch_del{
+      float: right;
+      min-width: 16px;
+      height: 16px;
+      background-color: transparent;
+      cursor: pointer;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_ad_del.png);
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      background-position: 2px 2px;
+      font-size: 12px;
+      color: #787878;
+      border: 0;
+    }
+    .shop_alert_ch_set{
+      float: right;
+      height: 16px;
+      line-height: 16px;
+      margin-right: 12px;
+      font-size: 12px;
+      border: 0;
+      color: #d8d8d8;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .shop_alert_ch_btn{
+      margin-top: 10px;
+    }
+    .shop_alert_ch_ok{
+      float: left;
+      width: 136px;
+      height: 44px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-left: 186px;
+      color: #fff;
+      border: 0;
+      background-image: linear-gradient(120deg,#37f,#45bede);
+    }
+    .shop_alert_ch_cancle{
+      float: left;
+      width: 136px;
+      height: 44px;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 40px;
+      border: 1px solid #979797;
+      background-color: transparent;
+      color: #4a4a4a;
+    }
+  </style>
+  <script>
+    function addaddress(){
+      alertbg1.style.display="block";
+    }
+    function changeaddress(){
+      alertbg2.style.display="block";
+    }
+    function closealert(){
+      alertbg1.style.display="none";
+      alertbg2.style.display="none";
+    }
+  </script>
+</head>
+<body>
+  <div class="web-frame">
+    <nav class="web-navbar">
+      <div class="navbar-innerFrame">
+          <div class="navbar-container">
+              <a href="#" class="navbar-logo">
+                  <img src="image/yingdi_logo_w.png">
+              </a>
+              <ul class="bar-list">
+                  <li class="shop active">
+                      <a href="index.html">营地商城</a>
+                  </li>
+                  <li class="taobao">
+                      <a href="#">营地淘宝</a>
+                  </li>
+                  <li class="match">
+                      <a href="#">比赛中心</a>
+                  </li>
+                  <li class="gamecenter">
+                      <a href="#">游戏中心</a>
+                  </li>
+                  <li class="downLoadApp">
+                      <a href="#">下载App</a>
+                  </li>
+                  <li class="yingdi-vip">
+                      <a href="#"></a>
+                  </li>
+              </ul>
+              <div class="login">
+                  <a href="reg.html">注册</a>
+                  <a href="javascript:loginin()" class="toLoginBtn">登录</a>
+              </div>
+              <div class="user-container"  style="display: none;">
+                  <div class="user-msg" id="ceshi">
+                      <span class="hasMesgNow"></span>
+                      <div class="user-option">
+                          <div style="height: 26px"></div>
+                          <ul class="msgButtonList">
+                              <li class="article_reply_msg">
+                                  <a href="#">收到评论</a>
+                                  <span class="noticeRemark hidden"></span>
+                              </li>
+                              <li class="forum_reply_msg">
+                                  <a href="#">收到回帖</a>
+                                  <span class="noticeRemark hidden"></span>
+                              </li>
+                              <li class="secret_chat_msg">
+                                  <a href="#">我的私信</a>
+                                  <span class="noticeRemark hidden"></span>
+                              </li>
+                              <li class="system_msg">
+                                  <a href="#">系统通知</a>
+                                  <span class="noticeRemark hidden"></span>
+                              </li>
+                              <li class="public_msg">
+                                  <a href="#">系统公告</a>
+                                  <span class="noticeRemark hidden"></span>
+                              </li>
+                          </ul>
+                      </div>
+                       
+                  </div>
+                  <div class="user-avatar">
+                      <img src="image/defaultavatar.png" class="userHeadImg">
+                      <div class="user-option">
+                          <div style="height: 26px;"></div>
+                          <ul class="myButtonList">
+                              <li class='user-detail'>
+                                  <div class="user-name">silverbulletlee</div>
+                                  <div class="user-fire">营火:850</div>
+                              </li>
+                              <li class="item myhome-page">
+                                  <a href="#">我的主页</a>
+                              </li>
+                              <li class="item">
+                                  <a href="#">我的营地</a>
+                              </li>
+                              <li  class="item">
+                                  <a href="#">资料设置</a>
+                              </li>
+                              <li class="toLogout">退出登录</li>
+                          </ul>
+                          <img src="image/normal.png" class="userBorder">
+                      </div>    
+                  </div>
+
+              </div>
+              <div class="to-coutribute">我要投稿</div>
+              <div class="navbar-searchInputInner"></div>
+          </div>
+      </div>
+      <div class="navbar-menuFrame">
+          <ul>
+              <li>
+                  <a href="#">推荐</a>
+              </li>
+              <li>
+                  <a href="#">炉石传说</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">炉石传说首页</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">精选文集</a></li>
+                      <li><a href="#">直播聚合</a></li>
+                      <li><a href="#">模拟开包</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">万智牌</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">万智牌首页</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">精选文集</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">游戏王</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">游戏王首页</a></li>
+                      <li><a href="#">精选文集</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">影之诗</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">影之诗首页</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">精选文集</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">昆特牌</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">昆特牌首页</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">精选文集</a></li>
+                      <li><a href="#">直播聚合</a></li>
+                      <li><a href="#">开桶助手</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">阴阳师：百闻牌</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">百闻牌首页</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">符文之地传奇</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">首页</a></li>
+                      <li><a href="#">卡牌查询</a></li>
+                      <li><a href="#">套牌合集</a></li>
+                      <li><a href="#">套牌广场</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">宝可梦卡牌</a>
+              </li>
+              <li>
+                  <a href="#">红与蓝</a>
+              </li>
+              <li>
+                  <a href="#">斗福</a>
+              </li>
+              <li>
+                  <a href="#">桌面游戏</a>
+              </li>
+              <li>
+                  <a href="#">日本麻将</a>
+              </li>
+              <li>
+                  <a href="#">LOL：云顶之弈</a>
+              </li>
+              <li>
+                  <a href="#">刀塔霸业</a>
+              </li>
+              <li>
+                  <a href="#">剑与远征</a>
+              </li>
+              <li>
+                  <a href="#">玩家杂谈</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">玩家杂谈首页</a></li>
+                      <li><a href="#">影视</a></li>
+                      <li><a href="#">读书</a></li>
+                      <li><a href="#">历史</a></li>
+                      <li><a href="#">生活</a></li>
+                      <li><a href="#">音乐</a></li>
+                      <li><a href="#">科技</a></li>
+                      <li><a href="#">美食</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">二次元</a>
+              </li>
+              <li>
+                  <a href="#">同人绘画</a>
+              </li>
+              <li>
+                  <a href="#">同人文学</a>
+              </li>
+              <li>
+                  <a href="#">营地电台</a>
+              </li>
+              <li>
+                  <a href="#">PC游戏</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">英雄联盟</a></li>
+                      <li><a href="#">守望先锋</a></li>
+                      <li><a href="#">风暴英雄</a></li>
+                      <li><a href="#">电游打折优惠</a></li>
+                      <li><a href="#">流放之路</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">主机游戏</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">主机游戏</a></li>
+                      <li><a href="#">任天堂NS</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">手机游戏</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">虚荣</a></li>
+                      <li><a href="#">燃烧王座</a></li>
+                      <li><a href="#">明日方舟</a></li>
+                      <li><a href="#">糖果缤纷乐</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">更多棋牌</a>
+                  <ul class="sub-level-menu">
+                      <li><a href="#">卡牌游戏</a></li>
+                      <li><a href="#">Artifact</a></li>
+                      <li><a href="#">上古卷轴：传奇</a></li>
+                      <li><a href="#">天神学院</a></li>
+                      <li><a href="#">2047</a></li>
+                      <li><a href="#">皇室战争</a></li>
+                      <li><a href="#">多多自走棋</a></li>
+                      <li><a href="#">赤潮自走棋</a></li>
+                      <li><a href="#">阴阳师自走棋</a></li>
+                      <li><a href="#">Mythgard</a></li>
+                      <li><a href="#">仙剑奇侠传：九野</a></li>
+                      <li><a href="#">战歌竞技场</a></li>
+                      <li><a href="#">斩兽之刃</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+    </nav>
+    <section class="web-content">
+      <div class="shop_ct_box">
+        <p class="shop_base_title">确认收货地址</p>
+        <div class="shop_address_box" style="display: none;">
+          <p class="shop_address_text">暂无收货地址，
+            <a href="javascript:addaddress()">添加默认收货地址</a>
+          </p>
+        </div>
+        <div class="shop_address_box2" style="display: block;" >
+          <div class="shop_address_boxleft">
+            <div class="shop_address_row1">
+              <span class="shop_address_row1_text">默认地址</span>
+              <button class="shop_address_row1_btn">修改</button>
+            </div>
+            <div class="shop_address_row2 clearfix">
+              <p class="shop_address_row2_name">
+                <span>收货人</span>
+                <span>:</span>
+                <span>大鼻头</span>
+              </p>
+              <p class="shop_address_row2_phone">
+                <span>手机号码</span>
+                <span>:</span>
+                <span>13579246810</span>
+              </p>
+            </div>
+            <p class="shop_address_row3">
+              <span>收货地址</span>
+              <span>:</span>
+              <span>北京市北京市市辖区海淀区****路***号院</span>
+            </p>
+          </div>
+          <div class="shop_address_boxright">
+            <button class="shop_address_boxright_change" onclick="changeaddress()">更换收货地址</button>
+            <button class="shop_address_boxright_add" onclick="addaddress()">新增地址</button>
+          </div>
+        </div>
+
+
+
+        <p class="shop_base_title">确认订单信息</p>
+        <div class="shop_ct_order">
+          <div class="shop_ct_order_head">
+            <div>商品</div>
+            <div>商品属性</div>
+            <div>
+              <p>营火抵扣</p>
+              <p class="text-flow">(拥有881营火)</p>
+            </div>
+            <div>价格</div>
+            <div>数量</div>
+            <div>小计</div>
+          </div>
+          <div class="shop_ct_order_body">
+            <div class="shop_ct_order_product clearfix">
+              <a href="#" class="shop_ct_order_img">
+                <img src="image/sp5.jpg">
+              </a>
+              <a href="#" class="shop_ct_order_name">
+                <p class="shop_ct_order_name1 text-overflow">【秋装】彩窗黑莲花</p>
+                <p class="shop_ct_order_name2">圆领卫衣-黑色-XS</p>
+              </a>
+              <span class="shop_ct_order_type">
+                实体商品
+              </span>
+              <div class="shop_ct_order_fire">
+                <div class="shop_ct_order_fire_box clearfix">
+                  <input type="text">
+                  <span>00</span>
+                </div>
+                <p class="shop_ct_order_fire_tip">最多可抵扣19900营火</p>
+              </div>
+              <div class="shop_ct_order_price text-overflow">
+                <span>￥</span>
+                <span>199.00</span>
+              </div>
+              <span class="shop_ct_order_num text-overflow">
+                1
+              </span>
+              <p class="shop_ct_order_clu text-overflow">
+                <span>￥</span>
+                <span>199.00</span>
+              </p>
+            </div>
+          </div>
+          <div class="shop_ct_order_foot clearfix">
+            <div class="shop_ct_order_send_left">
+              <div class="shop_ct_order_send_type clearfix">
+                <div class="shop_order_send_key">配送方式：</div>
+                <div class="shop_order_send_list clearfix">
+                  <div class="shop_ct_order_send_item text-overflow shop_ct_order_active">普通快递 ￥10.00</div>
+                  <div class="shop_ct_order_send_item text-overflow">顺丰 ￥28.00</div>
+                  <div class="shop_ct_order_send_full">还差1元，普通快递免邮费</div>
+                </div>
+              </div>
+              <div class="shop_ct_order_pay_type clearfix">
+                <div class="shop_order_pay_key">支付方式：</div>
+                <div class="shop_order_pay_list clearfix">
+                  <div class="shop_ct_order_pay_item text-overflow shop_ct_order_active">支付宝</div>
+                  <div class="shop_ct_order_pay_item text-overflow">微信</div>                  
+                </div>
+              </div>
+              <div class="shop_ct_order_send_other clearfix">
+                <div class="shop_ct_order_send_other_key">备注：</div>
+                <div class="shop_ct_order_send_other_tip clearfix">
+                  <input type="text" placeholder="请将购买需求做详细说明" class="shop_ct_order_send_other_input">
+                  <span class="shop_ct_order_send_other_limit">0/50</span>
+                </div>
+              </div>
+              <div class="shop_ct_email_box clearfix">
+                <div class="shop_ct_email_key"></div>
+                <div class="shop_ct_email_val"></div>
+              </div>
+            </div>
+            <div class="shop_ct_order_send_right">
+              <p class="shop_ct_order_send_price text-overflow">
+                ￥10.00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="shop_ct_end">
+          <div class="shop_ct_end_pay clearfix">
+            <div class="shop_ct_end_pay_num">
+              <p class="shop_ct_end_pay_money text-overflow">
+                ￥208.00
+              </p>
+              <p class="shop_ct_end_pay_fire text-overflow">
+                100
+              </p>
+            </div>
+            <p class="shop_ct_end_pay_text">应付金额：</p>
+          </div>
+          <div class="shop_ct_end_buyer clearfix" style="display: none;">
+            <p class="shop_ct_end_buyer_phone text-overflow"></p>
+            <p class="shop_ct_end_buyer_add text-overflow"></p>
+          </div>
+        </div>
+        <div class="shop_ct_ok_sec clearfix">
+          <button class="shop_ct_ok">确认订单</button>
+        </div>
+
+
+
+        <div class="shop_alert_box" id="alertbg1" style="display: none;">
+          <div class="shop_alert_flex">
+            <div class="shop_alert_inner shop_alert_add">
+              <div class="shop_alert_head">添加收货地址</div>
+              <div class="shop_alert_body">
+                <div class="shop_alert_add_b1 clearfix">
+                  <div class="shop_alert_add_b1l clearfix">
+                    <p class="shop_alert_add_b1l_key">
+                      收货人
+                    </p>
+                    <p class="shop_alert_add_divider">:</p>
+                    <input type="text" class="shop_alert_add_b1l_val" placeholder="请填写您的真实姓名">
+                  </div>
+                  <div class="shop_alert_add_b1r clearfix">
+                    <p class="shop_alert_add_b1r_key">
+                      手机号码
+                    </p>
+                    <p class="shop_alert_add_divider">:</p>
+                    <input type="text" class="shop_alert_add_b1r_val">
+                  </div>
+                </div>
+                <div class="shop_alert_add_b2 clearfix">
+                  <p class="shop_alert_add_a_key">收货地址</p>
+                  <p class="shop_alert_add_divider">:</p>
+                  <button class="shop_alert_add_pro text-overflow">
+                    北京市
+                  </button>
+                  <button class="shop_alert_add_city text-overflow">
+                    北京市市辖区
+                  </button>
+                  <button class="shop_alert_add_area text-overflow">
+                    东城区
+                  </button>
+                  <div class="shop_alert_add_pro_list" style="display:none;">
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                  </div>
+                  <div class="shop_alert_add_city_list" style="display:none;">
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                  </div>
+                  <div class="shop_alert_add_area_list" style="display:none;">
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                    <div class="shop_alert_add_item">北京市</div>
+                  </div>
+                </div>
+                <div class="shop_alert_add_b3 clearfix">
+                  <p class="shop_alert_add_det_key">详细地址</p>
+                  <p class="shop_alert_add_divider">:</p>
+                  <textarea class="shop_alert_add_det_text"></textarea>
+                </div>
+                <div class="shop_alert_add_b4 clearfix">
+                  <button class="shop_alert_add_b4_btn">
+                    <svg class="shop_alert_add_b4_btn_svg" xmlns="http://www/w3.org/2000/svg" version="1.1" width="7" height="5">
+                      <polyline points="0,2 3,5 7,0"></polyline> 
+                    </svg>
+                  </button>
+                  <p class="shop_alert_add_b4_text">设为默认地址</p>
+                </div>
+                <div class="shop_alert_add_b5 clearfix">
+                  <button class="shop_alert_add_save">保存新地址</button>
+                  <button class="shop_alert_add_cancle" onclick="closealert()">取消</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop_alert_box" id="alertbg2" style="display:none;">
+          <div class="shop_alert_flex">
+            <div class="shop_alert_inner shop_alert_ch">
+              <div class="shop_alert_head">添加收货地址</div>
+              <div class="shop_alert_body">
+                <div class="shop_alert_ch_list">
+                  <div class="shop_alert_ch_item clearfix">
+                    <div class="shop_alert_ch_itemleft">
+                      <div class="shop_alert_ch_itemleft_r1 clearfix">
+                        <p>
+                          <span>收货人</span>
+                          <span>:</span>
+                          <span>大鼻头</span>
+                        </p>
+                        <p>
+                          <span>手机号码</span>
+                          <span>:</span>
+                          <span>13579246810</span>
+                        </p>
+                      </div>
+                      <p class="shop_alert_ch_itemleft_r2">
+                        <span>收货地址</span>
+                        <span>:</span>
+                        <span>北京市北京市市辖区海淀区****路***号院大鼻头</span>
+                      </p>
+                    </div>
+                    <div class="shop_alert_ch_itemright clearfix">
+                      <button class="shop_alert_ch_del"></button>
+                      <button class="shop_alert_ch_set">默认收货地址</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="shop_alert_ch_btn clearfix">
+                  <button class="shop_alert_ch_ok">确定</button>
+                  <button class="shop_alert_ch_cancle" onclick="closealert()">取消</button>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+
+  <script>
+    var btnp=document.getElementsByClassName("shop_alert_add_pro")[0];
+    var btnpl=document.getElementsByClassName("shop_alert_add_pro_list")[0];
+    btnp.onclick=function(){
+      if(btnpl.style.display!="none"){
+        btnpl.style.display="none";
+      }else{
+        btnpl.style.display="block";
+      }
+    }
+    var btnc=document.getElementsByClassName("shop_alert_add_city")[0];
+    var btnpc=document.getElementsByClassName("shop_alert_add_city_list")[0];
+    btnc.onclick=function(){
+      if(btnpc.style.display!="none"){
+        btnpc.style.display="none";
+      }else{
+        btnpc.style.display="block";
+      }
+    }
+    var btna=document.getElementsByClassName("shop_alert_add_area")[0];
+    var btnpa=document.getElementsByClassName("shop_alert_add_area_list")[0];
+    btna.onclick=function(){
+      if(btnpa.style.display!="none"){
+        btnpa.style.display="none";
+      }else{
+        btnpa.style.display="block";
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="shop_tool_box">
+          <div class="shop_tool">
+            <a href="shopcar.html" class="shop_tool_cart">购物车</a>
+            <a href="#" class="shop_tool_server">客服</a>
+            <a href="#" class="shop_tool_orders">订单</a>
+            <a href="#" class="shop_tool_top"></a>  
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="overlay" id="bggray"></div>
+    <div class="login_frame" id="loginwin">
+      <div class="login_frame_top">
+                <a href="javascript:close()" class="close">
+                    <img src="image/close.png">
+                </a>
+                <div class="login_logoImg">
+                    <img src="image/logo1.png">
+                </div>
+                <div class="switchLogin" id="login-switch">
+                    <img src="image/qr.png">
+                </div>
+      </div>
+      <div class="login_frame_content">
+                <div class="form-group">
+                    <input type="text" placeholder="用户名"  id='phonelog'>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="密码"  id='upwdlog'>
+                </div>
+                <div class="form_other">
+                    <div class="user_inputWarning"></div>
+                    <div class="checkbox">
+                        <label class="small">
+                            <input type="checkbox" checked id="login_state">
+                            记住登录状态
+                        </label>
+                    </div>
+                    <div class="register">
+                        <span>没有账号？</span><a href="#" style="margin-right: 20px;">立即注册</a><a href="#">忘记密码?</a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 4px;">
+                    <button class="loginBtn" onclick="log()">登录</button>
+                    <div class="thirdPart">
+                        <span>第三方账号登录</span>
+                        <div class="icon" id="login_weixin"></div>
+                        <div class="icon" id="qq_connect_btn"></div>
+                    </div>
+                </div>                
+      </div>
+      <div class="login_frame_qrcode hidden">
+                <div class="passMsg">使用密码登录</div>
+                <div class="photo">
+                    <div class="image">
+                        <img src="#" class="qr">
+                        <div class="tutorial">
+                            <img src="#"class="qr">
+                        </div>
+                    </div>
+                    <p>打开最新旅法师营地App</p>
+                    <p>在个人中心页面右上角打开扫一扫</p>
+                </div>
+                <div class="result hidden">
+                    <div class="image">
+                        <img src="#">
+                    </div>
+                    <p>扫描成功，请在手机上确认登录</p>
+                    <a href="#">返回二维码</a>
+                </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
+<!--<svg class="shop_list_left_lt" xmlns="http://www/w3.org/2000/svg" version="1.1" width="8" height="10">
+      <polyline points="0,0 8,5 0,10"></polyline> 
+    </svg> -->

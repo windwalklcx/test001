@@ -1,0 +1,434 @@
+    .shop_det_box{
+      position: relative;
+      width: 1200px;
+      margin: auto;
+      padding-top: 35px;
+    }
+    .shop_det_nav{
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+
+
+    .shop_bread_box>a{
+      float: left;
+    }
+    .shop_bread_box>a+a{
+      margin-left: 10px;
+    }
+    .shop_bread1{
+      font-size: 20px;
+      color: #4a4a4a;
+    }
+    .shop_bread_divider{
+      fill: none;
+      stroke: #787878;
+    }
+    .shop_bread2{
+      font-size: 20px;
+      color: #787878;
+    }
+
+
+
+    .shop_det_top{
+      min-height: 457px;
+    }
+    .shop_det_left{
+      float: left;
+      width: 368px;
+    }
+    .shop_det_big_img_box{
+      width: 368px;
+      height: 368px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .shop_big_img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .shop_det_small_img_list{
+      margin-top: 12px;
+    }
+    .shop_det_samll_img_item{
+      position: relative;
+      float: left;
+      width: 66px;
+      height: 66px;
+      border-radius: 6px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+    .shop_det_samll_img_item+.shop_det_samll_img_item{
+      margin-left: 9px;
+    }
+    .shop_det_samll_img_item.shop_det_samll_img_item_active{
+      box-shadow: 0 0 0 4px #37f;
+    }
+
+    .shop_det_right{
+      float: left;
+      width: 799px;
+      margin-left: 33px;
+    }
+    .shop_det_title{
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      line-height: 30px;
+      font-size: 24px;
+      color: #4a4a4a;
+    }
+    .shop_det_des{
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #9b9b9b;
+    }
+    .shop_det_price_sec{
+      margin-top: 24px;
+      padding-top: 10px;
+      margin-bottom: 24px;
+      height: 114px;
+      background-image: linear-gradient(90deg,#f0f5ff,rgba(250,249,235,0));
+    }
+    .shop_det_price{
+      height: 66px;
+      padding-left: 8px;
+      font-size: 48px;
+      color: #ef636f;
+      line-height: 66px;
+    }
+    .shop_det_price2{
+      padding-left: 16px;
+      height: 16px;
+      font-size: 12px;
+      color: #9b9b9b;
+      line-height: 16px;
+    }
+    .shop_det_price2>span+span{
+      margin-left: 5px;
+    }
+    .shop_det_price2>.shop_list_price2_num{
+      margin-left: 0;
+      text-decoration: line-through;
+    }
+    .shop_det_fire, .shop_det_limit, .shop_det_num_limit, .shop_det_pro, .shop_det_rest{
+      height: 16px;
+      font-size: 12px;
+      color: #9b9b9b;
+      margin-top: 14px;
+      padding-left: 16px;
+    }
+    .shop_det_fire>span+span, .shop_det_limit>span+span, .shop_det_num_limit>span+span, .shop_det_pro>span+span, .shop_det_rest>span+span{
+      margin-left: 5px;
+    }
+    .shop_det_spec_box{
+      margin-top: 10px;
+    }
+    .shop_det_sku_area{
+      position: relative;
+      color: #9b9b9b;
+      padding: 0 50px 0 16px;
+    }
+    .shop_det_sku_area:first-of-type{
+      margin-top: 0;
+    }
+    .shop_det_sku_area>*{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .shop_det_sku_title{
+      font-size: 12px;
+      height: 24px;
+      line-height: 24px;
+    }
+    .shop_det_sku_title>span+span{
+      margin-left: 5px;
+    }
+    .shop_det_sku_list{
+      position: relative;
+      margin-left: 10px;
+      font-size: 0;
+    }
+    .shop_det_sku_item{
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px;
+      height: 24px;
+      padding: 0 8px;
+      margin-right: 24px;
+      margin-bottom: 10px;
+      color: #37f;
+      border: 1px solid #37f;
+      border-radius: 3px;
+      background-color: #fff;
+      line-height: 24px;
+    }
+    .shop_det_sku_item.shop_det_sku_item_active{
+      background-color: #37f;
+      color: #fff;
+    }
+    /* .shop_det_sku_item:hover{
+      background-color: #37f;
+      color: #fff;
+    } */
+    .shop_det_num{
+      height: 26px;
+      margin-top: 13px;
+    }
+    .shop_det_num_left{
+      float: left;
+      height: 20px;
+      margin-top: 3px;
+      line-height: 20px;
+      padding-left: 16px;
+      font-size: 12px;
+      color: #9b9b9b;
+    }
+    .shop_det_num_left span:last-child{
+      margin-left: 5px;
+    }
+    .shop_det_num_right{
+      float: left;
+      margin-left: 5px;
+    }
+    .shop_det_num_input_box{
+      float: left;
+      width: 44px;
+      height: 26px;
+    }
+    .shop_det_num_input{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      outline: 0;
+      border-radius: 3px;
+      background-color: #f5f5f5;
+      font-size: 14px;
+      color: #9b9b9b;
+      text-align: center;
+    }
+    .shop_det_num_con{
+      float: left;
+      width: 14px;
+      height: 26px;
+      margin-left: 3px;
+    }
+    button{outline: 0;}
+    .shop_det_num_con button{
+      display: block;
+      width: 14px;
+      height: 12px;
+      padding: 0;
+      border: 0;
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .shop_det_dec{
+      margin-top: 2px;
+    }
+    .shop_det_inc_svg,.shop_det_dec_svg{
+      display: block;
+      fill: none;
+      stroke: #9b9b9b;
+      margin-left: 2px;
+    }
+    .shop_det_buy{
+      margin-top: 20px;
+      padding-left: 16px;
+    }
+    .shop_det_buy_base{
+      position: relative;
+      float: left;
+      width: 160px;
+      height: 44px;
+      line-height: 42px;
+      border: 0;
+      border-radius: 3px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #d8d8d8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor:not-allowed;
+    }
+    .shop_det_buy_base[data-buy='1']{
+      border: 1px solid #3c69b8;
+      color: #3c69b8;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .shop_det_buy_base[data-buy='1']:hover{
+      background-color: #f0f0f0;
+    }
+    .shop_det_buy_base+.shop_det_buy_base{
+      margin-left: 36px;
+    }
+    .shop_det_buy_base.shop_det_buy_im[data-buy='1']{
+      background-image: linear-gradient(120deg,#37f,#45bede);
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+    }
+    .shop_det_buy_base.shop_det_buy_im[data-buy='1']:hover{
+      background-image: linear-gradient(120deg,#2b5cbd,#2c98b5);
+    }
+    .shop_det_buy_rec{
+      float: left;
+      height: 18px;
+      min-width: 80px;
+      max-width: 350px;
+      margin-top: 13px;
+      margin-left: 54px;
+      border: 0;
+      background-color: transparent;
+      font-size: 12px;
+      color: #9b9b9b;
+      text-align: left;
+      text-indent: 20px;
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_rec_no.png);
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      background-position: 0 4px;
+      cursor: pointer;
+    }
+    .shop_det_buy_rec[data-rec='1']{
+      background-image: url(http://static.iyingdi.cn/yingdiWeb/images/shop/shop_rec_yes.png);
+      background-size: 12px 15px;
+      background-position: 0 1px;
+    }
+
+
+
+    .shop_det_bot{
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+    .shop_det_tab_box{
+      float: left;
+      width: 740px;
+    }
+    .shop_det_tab_head{
+      height: 36px;
+      line-height: 36px;
+      border-bottom: 1px solid #dbdbdb;
+    }
+    .shop_det_tab_head>div{
+      float: left;
+      height: 36px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .shop_det_tab_head>div+div{
+      margin-left: 72px;
+    }
+    .shop_det_tab_head>div.shop_det_tab_head_active{
+      color: #37f;
+      border-bottom: 4px solid #37f;
+    }
+    .shop_det_tab_body>div{
+      display: none;
+    }
+    .shop_det_des_body{
+      padding-top: 30px;
+    }
+    .shop_det_des_img_box{
+      margin-bottom: 30px;
+    }
+    .shop_det_des_img{
+      width: 100%;
+      display: block;
+    }
+    .shop_det_des_img_title{
+      margin-top: 8px;
+      font-size: 12px;
+      color: #4a4a4a;
+      text-align: center;
+    }
+    .shop_det_jud_empty{
+      padding-top: 160px;
+      font-size: 20px;
+      color: #9b9b9b;
+      text-align: center;
+    }
+
+
+    .shop_det_rel_box{
+      float: right;
+      width: 410px;
+    }
+    .shop_det_rel_head_box{
+      height: 36px;
+      padding-top: 4px;
+      border-bottom: 1px solid #dbdbdb;
+    }
+    .shop_det_rel_head1{
+      float: left;
+      height: 30px;
+      font-size: 18px;
+      line-height: 30px;
+      color: #37f;
+    }
+    .shop_det_rel_head2{
+      float: left;
+      height: 20px;
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #787878;
+    }
+    .shop_det_rel_item{
+      display: block;
+      margin-top: 24px;
+    }
+    .shop_det_rel_item_left{
+      float: left;
+      width: 106px;
+      height: 106px;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+    .shop_det_rel_item_img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .shop_det_rel_item_right{
+      float: right;
+      width: 286px;
+      padding-top: 6px;
+    }
+    .shop_det_rel_item_title{
+      height: 44px;
+      font-size: 16px;
+      color: #4a4a4a;
+      overflow: hidden;
+    }
+    .shop_det_rel_item_price{
+      height: 30px;
+      margin-top: 16px;
+      line-height: 30px;
+    }
+    .shop_det_rel_item_price span{
+      font-size: 12px;
+      color: #9b9b9b;
+    }
+    .shop_det_rel_item_price .shop_det_rel_item_price1{
+      float: left;
+      font-size: 22px;
+      color: #ef636f;
+      max-width: 160px;
+      margin-right: 16px;
+    }
+    .shop_det_rel_item_price2{
+      text-decoration: line-through;
+    }

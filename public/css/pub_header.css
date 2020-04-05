@@ -1,0 +1,731 @@
+        .web-frame{
+            position: relative;
+            width: 100%;
+            font-family: Arial,"Hiragino Sans GB","Microsoft YaHei",SimSun,Helvetica,Tahoma,Arial sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #4b4b4b;
+            min-width: 1280px;
+            background-color: #fbfbfb;
+        }
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a{background-color: transparent;text-decoration: none;color: inherit;}
+        ul{list-style: none;}
+        ul>li{cursor: pointer;}
+        button{
+            outline: 0;
+        }
+        .hidden{display: none !important;}       
+        nav{
+            position: relative;width: 100%;
+        }
+        .clearfix::before{
+            content: '';
+            display: table;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .text-overflow{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+            text-align: justify;
+        }
+        input::placeholder{
+            opacity: 0.3;
+        }
+        .web-content{
+            min-height: 850px;
+            position: relative;
+        }
+        .scale_box .scale_img{
+            transition: transform .8s ease;
+        }
+        .scale_box:hover .scale_img{
+            transform: scale(1.08);
+        }
+        .navbar-innerFrame{
+            width: 100%; margin: auto;
+            height: 60px;
+            position: relative;
+            background-image: linear-gradient(89deg,#133c81 5%,#3672bb 48%,#133c81 95%);
+        }
+        .navbar-container{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 1200px;
+            margin: auto;
+            color: #fff;
+        }
+        .navbar-logo{
+            flex: 0 0 160px;
+            height: 31px;
+            margin-right: 53px;
+        }
+        .navbar-logo>img{
+            height: 31px;
+            width: auto;
+        }
+        .bar-list{
+            position: relative;
+            flex: 0 0 auto;
+            min-width: 368px;
+            height: auto;
+            font-size: 0;
+            margin-right: 236px;
+        }
+        .bar-list>li{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 50px;
+            font-weight: 700;
+        }
+        .bar-list a{
+            font-size: 14px;
+            height: 14px;
+            line-height: 14px;
+            color: #fff;
+        }
+        .bar-list>li:last-child{
+            margin: 0;
+        }
+        .bar-list .active::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #7ea9e3;
+            bottom: -7px;
+            left: 0;
+        }
+        .bar-list>.yingdi-vip{
+            position: absolute;
+            top: -8px;right: -120px;
+            width: 110px;
+            height: 30px;
+            border-radius: 15px;
+            background-image: url(../image/vip_btn.png);
+            background-size: cover;
+        }
+        .login{
+            flex: 0 0 100px;
+            height: 17px;
+            font-size: 14px;
+            color: #fff;
+        }
+        .login>a{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 17px;
+        }
+        .toLoginBtn{
+            margin-left: 30px;
+        }
+        .toLoginBtn::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: #5873be;
+            left: -17px;
+        }
+        .user-container{
+            flex: 0 0 100px;
+            font-size: 0;
+        }
+        .user-container>div{
+            display: inline-block;
+            vertical-align: top;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+        }
+        .user-container .user-msg{
+            position: relative;
+            background-image: url(../image/navbar-msg-w.png);
+            background-size: 19px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .hasMesgNow{
+            position: absolute;
+            top: 7px;right: 6px;width: 9px;height: 9px;
+            background-color: #e5746b;
+            border-radius: 100%;
+        }
+        .user-option{
+            position: absolute;
+            left: -71px;top: 35px;
+            z-index: 100;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .2s opacity .2s;
+        }
+        .user-msg:hover>.user-option{
+            visibility: visible;
+            opacity: 1;
+            z-index: 1000;
+        }
+        .msgButtonList{
+            width: 180px;
+            background-image: linear-gradient(-135deg,rgba(36,100,179,.95) 0,#133b7e 100%);
+            box-shadow: 0 2px 4px 0 rgba(0, 0,0, .32);
+            border-radius: 6px;
+            color: #a2c3ff;
+            padding: 13.5px 18px;
+            font-size: 14px;
+        }
+        .msgButtonList>li{
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 14px;
+            transition: background .2s;
+            border-radius: 4px;
+        }
+        .msgButtonList>li>a{
+            display: block;
+        }
+        .noticeRemark hidden{
+            position: absolute;
+            right: 6px;
+            top: 9px;
+            font-size: 12px;
+            background-color: #e5746b;
+            color: #fff;
+            height: 13px;
+            line-height: 14px;
+            padding: 0 8px;
+            border-radius: 3px;
+        }
+        .user-container .user-avatar{
+           position: relative;
+           border-radius: 50%;
+           margin-left: 21px; 
+        }
+        .userHeadImg{
+            width: 100%;height: 100%;
+            border-radius: 50%;
+        }
+        .user-avatar .user-option{
+            position: absolute;
+            left: -71px;
+            top: 35px;
+            z-index: 100;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .2s,opacity .2s;
+        }
+        .user-avatar:hover>.user-option{
+            visibility: visible;
+            opacity: 1;
+            z-index: 1000;
+        }
+        .myButtonList{
+            background-image: linear-gradient(-135deg,rgba(36,100,179,.95) 0,#133b7e 100%);
+            box-shadow: 0 2px 4px 0 rgba(0, 0,0, .32);
+            width: 180px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #a2c3ff;
+            padding: 0 18px;
+        }
+        .myButtonList>li{
+            text-align: center;
+        }
+        .user-detail{
+            height: 68px;
+            padding-top: 15px;
+            border-bottom: 2px solid #3967b9;
+            margin-bottom: 15px;
+        }
+        .user-detail>div{
+            height: 14px;
+            line-height: 14px;
+        }
+        .user-name{
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .user-fire{
+            font-size: 12px;
+            color: #8ab1ff;
+        }
+        .myButtonList .item{
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 14px;
+            transition: background .2s;
+            border-radius: 4px;
+        }
+        .item>a{
+            display: block;
+        }
+        .myButtonList .toLogout{
+            height: 44px;
+            line-height: 44px;
+            border-top: 2px solid #3967b9;
+            margin-top: 15px;
+        }
+        .myButtonList .myButtonList{
+            height: 44px;
+            line-height: 44px;
+            border-top:2px solid #3967b9 ;
+            margin-top: 15px;
+        }
+        .userBorder{
+            display: none;
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            width: 68px;
+            height: 68px;
+        }
+        .navbar-innerFrame .to-coutribute{
+            flex: 0 0 100px;
+            height: 100%;
+            text-align: center;
+            background: #4171c5;
+            line-height: 60px;
+            margin-left: 30px;
+            box-shadow: 0 0 10px 0 rgba(0, 0,0, .15);
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .navbar-innerFrame .navbar-searchInputInner{
+            flex: 0 0 30px;
+            height: 30px;
+            background-image: url(../image/nav_search_w.png);
+            background-size: cover;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        .navbar-menuFrame{
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: #fff;
+            box-shadow: 0 2px 22px 0 rgba(0, 0,0, .04);
+        }
+        .navbar-menuFrame>ul{
+            position: relative;
+            font-size: 0;
+            color: #787878;
+            width: 1200px;
+            margin: auto;
+        }
+        .navbar-menuFrame>ul>li{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 48px;
+            margin-right: 35px;
+            font-size: 14px;
+        }
+        .navbar-menuFrame>ul>li>a{
+            display: block;
+        }
+        .navbar-menuFrame>ul>li>a:hover{
+            color:#3b68b8;
+        }
+        .sub-level-menu{
+            position: absolute;
+            left: -38px;top: 48px;
+            z-index: 100;
+            width: 130px;
+            height: auto;
+            background: linear-gradient(-135deg,rgba(36,100,179,0.95) 0,#133b7e 100%);
+            box-shadow: 0 2px 4px 0 rgba(0, 0,0, .32);
+            border-radius: 0 0 10px 10px;
+            font-size: 14px;
+            color: #ecf1f5;
+            padding: 15px 6px;
+            visibility: hidden;opacity: 0;
+            transition: all .2s;
+        }
+        .navbar-menuFrame>ul>li:hover>.sub-level-menu{
+            visibility: visible;opacity: 1;
+        }
+        .sub-level-menu>li{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 14px;
+            transition: background .2s;
+            border-radius: 4px;
+        }
+        .sub-level-menu>li:hover{
+            background: #1c3d79;
+        }
+        .overlay{
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,.5);
+            z-index: -1;
+            animation: fadeIn .4s;
+        }
+        @keyframes fadeIn{
+            from{opacity: 0};
+            to{opacity: 1;}
+        }
+        .login_frame{
+            display: none;
+            position: fixed;
+            top:30%;
+            left: 50%;
+            margin-left: -265px;
+            width: 530px;
+            min-height: 350px;
+            background-color: #fff;
+            border-color: #fff;
+            border-radius: 12px;
+            z-index: -1;
+            padding-bottom: 20px;
+            animation: fadeIn 0.4s;
+        }
+        .login_frame_top{
+            position: relative;
+            height: 90px;
+            background-color: inherit;
+            border-color: inherit;
+            border-radius: 12px;
+        }
+        .login_frame_top a{
+            position: absolute;
+            left: 23px;top:23px;
+            width: 20px;
+            height: 20.6px;
+            opacity: 1;
+            cursor: pointer;
+        }
+        .close{
+            float: left;
+            width: 20px;height: 20px;
+            opacity: .5;
+        }
+        .login_frame_top a>img{
+            width: 100%;
+        }
+        .close>img{
+            width: 100%;
+        }
+        .login_logoImg{
+            position: relative;
+            background-color: inherit;
+            border-color: inherit;
+            border-radius: 50%;
+            margin: auto;
+            width: 130px;
+            padding: 16px;
+            top: -52px;
+        }
+        .login_logoImg>img{
+            width: 100%;
+            display: block;
+            border-radius: 50%;
+        }
+        .switchLogin{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+        .switchLogin::before{
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 0;
+            height: 0;
+            border-top: 66px solid transparent;
+            border-left: 66px solid transparent ;
+            transition: border 0.2s;
+        }
+        .switchLogin>img{
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .login_frame_content{
+            width: 400px;
+            min-height: 240px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .form-group{
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .login_frame_content .form-group{
+            position: relative;
+            border: 1px solid #9b9b9b;
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            background: #fff;
+            padding-left: 20px;
+            margin-bottom: 21px;
+        }
+        .form-group input{
+            background: 0 0;
+            border: 0 none;
+            font-size: 14px;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            outline: 0;
+        }
+        .form_other{
+            position: relative;
+            width: 100%;
+            height: auto;
+            font-size: 12px;
+            color: #9b9b9b;
+            margin-bottom: 20px;
+            margin-top: 25px;
+        }
+        .user_inputWarning{
+            position: absolute;
+            top: -20px;
+            color: #e5746b;
+        }
+        .checkbox,.radio{
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .form_other .checkbox{
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            margin: 0;
+            margin-right: 124px;
+        }
+        label{
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        /* .small{
+            font-size: 85%;
+        } */
+        .checkbox label,.radio label{
+            min-height: 20px;
+            padding-left: 18px;
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .form_other .register{
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+        }
+        .form_other .register>a{
+            color: rgb(75, 144, 226);
+            cursor: pointer;
+        }
+        .checkbox input[type=checkbox]{
+            position: absolute;
+            margin-top: 2px;
+            margin-left: -16px;
+        }
+        input[type=checkbox],input[type=radio]{
+            margin: 4px 0 0;
+            line-height: normal;
+            padding: 0;
+        }
+        .loginBtn{
+            display: inline-block;
+            vertical-align: top;
+            width: 140px;
+            height: 50px;
+            font-size: 14px;
+            height: 50px;
+            font-size: 14px;
+            color: #f3f9ff;
+            text-align: center;
+            white-space: nowrap;
+            background-image: none;
+            border: 1px solid transparent;
+            background: #3377ff;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 17px;
+        }
+        .thirdPart{
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            height: 38px;
+            line-height: 38px;
+            font-size: 12px;
+            margin-top: 9px;
+            color: #787878;
+        }
+        .thirdPart>span{
+            margin-right: 15px;
+        }
+        .thirdPart .icon{
+            display: inline-block;
+            vertical-align: top;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-size: cover;
+            transition: background .3s;
+        }
+        #login_weixin{
+            background-image: url(../image/wechat.png);
+            margin-right: 15px;
+        }
+        #qq_connect_btn{
+            background-image: url(../image/qq1.png);
+            margin-right: 15px;
+        }
+        .passMsg{
+            position: absolute;
+            right: 50px;
+            top: -70px;
+            width: 104px;
+            height: 25px;
+            background-image: url(../image/passmsg.png);
+            background-size: cover;
+            font-size: 14px;
+            color: #787878;
+            line-height: 1.9;
+            padding-left: 7px;
+        }
+        .photo{
+            width: 240px;
+            height: 100%;
+            margin: auto;
+        }
+        .photo .image{
+            position: relative;
+            width: 170px;
+            height: 170px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .photo .image>img{
+            width: 100%;
+            height: 100%;
+        }
+        .tutorial{
+            position: absolute;
+            top: -25px;
+            left: -250px;
+            width: 237px;
+            height: 229px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .tutorial>img{
+            width: 100%;
+            height: 100%;
+        }
+        .photo>p{
+            font-size: 16px;
+            color: #787878;
+            letter-spacing: 0;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .result{
+            width: 225px;
+            height: auto;
+            margin: auto;
+        }
+        .result>p{
+            text-align: center;
+            margin: 30px 0 35px 0;
+            font-size: 16px;
+            color: #787878;
+            line-height: 16px;
+        }
+        .result>a{
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            color: #3b68b8;
+            line-height: 16px;
+        }
+
+
+        .shop_tool_box{
+            position: absolute;
+            right: -20px;
+        }
+        .shop_tool{
+            position: fixed;
+            bottom: 200px;
+            z-index: 5;
+            width: 60px;
+            height: 196px;
+        }
+        .shop_tool a{
+            display: block;
+            width: 60px;
+            height: 60px;
+            padding-top: 40px;
+            border-radius: 6px;
+            background-color: #f7f7f7;
+            font-size: 12px;
+            color: #4a4a4a;
+            text-align: center;
+            background-repeat: no-repeat;
+        }
+        .shop_tool a:hover{
+            background-color: #d2d2d2;
+        }
+        .shop_tool_cart{
+            background-image: url(../image/shop_carts.png);
+            background-size: 26px 20px;
+            background-position: 15px 11px;
+        }
+        .shop_tool a+a{
+            margin-top: 8px;
+        }
+        .shop_tool_server{
+            background-image: url(../image/shop_server.png);
+            background-size: 26px 26px;
+            background-position: 17px 9px;
+        }
+        .shop_tool_orders{
+            background-image: url(../image/shop_orders.png);
+            background-size: 18px 22px;
+            background-position: 21px 10px;
+        }
+        .shop_tool_top{
+            background-image: url(../image/backTop.png);
+            background-size: 100% 100%;
+            background-position: 0 0 ;
+        }
+        .shop_tool_top:hover{
+            background-image: url(../image/backTop_hover.png);
+        }
